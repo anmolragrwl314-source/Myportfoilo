@@ -61,14 +61,6 @@
   .tab .dot{color:var(--accent);}
   section{padding:88px 0;border-bottom:1px solid var(--line);}
   section:last-of-type{border-bottom:none;}
-  .filepath{
-    font-family:var(--mono);
-    font-size:0.78rem;
-    color:var(--text-dim);
-    margin-bottom:18px;
-    display:block;
-  }
-  .filepath::before{content:'// ';color:var(--accent);}
   h1,h2,h3{font-family:var(--serif);font-weight:500;color:var(--text);}
   .hero{padding-top:64px;}
   .hero h1{
@@ -191,7 +183,7 @@
 
   <section class="hero" id="home">
     <p class="role">EDIT ME: Software Engineer, in training</p>
-    <h1>Anmol Ratan Agarwal</h1>
+    <h1>Anmol Ratan <em>Agarwal</em></h1>
     <p class="pitch">
       EDIT ME: Write 1-2 sentences about what you build and what you're working toward.
     </p>
@@ -202,7 +194,7 @@
   </section>
 
   <section id="about">
-    <span class="filepath">about</span>
+    <h2 style="margin-bottom:32px;">About</h2>
     <div class="about-grid">
       <div class="about-text">
         <p>I'm a computer science student at Lovely Professional University with a strong focus on Machine Learning and Artificial Intelligence. What excites me most is turning ideas into working systems — I've built everything from robots that navigate on their own to secure tools for storing sensitive notes and platforms that let people collaborate in real time.</p>
@@ -214,11 +206,10 @@
   </section>
 
   <section id="skills">
-    <span class="filepath">skills</span>
     <h2 style="margin-bottom:32px;">Skills</h2>
     <div class="skills-cols">
       <div class="skills-col">
-        <h3>technical</h3>
+        <h3>Technical</h3>
         <div class="tag-list">
           <span class="tag">Python</span>
           <span class="tag">Java</span>
@@ -231,7 +222,7 @@
         </div>
       </div>
       <div class="skills-col">
-        <h3>currently learning / interested in</h3>
+        <h3>Currently Learning / Interested In</h3>
         <div class="tag-list">
           <span class="tag">Systems Programming</span>
           <span class="tag">Compilers</span>
@@ -243,7 +234,6 @@
   </section>
 
   <section id="experience">
-    <span class="filepath">experience</span>
     <h2 style="margin-bottom:8px;">Experience</h2>
     <div class="exp-item">
       <div class="exp-date">EDIT ME: Month Year — Month Year</div>
@@ -264,7 +254,6 @@
   </section>
 
   <section id="certificates">
-    <span class="filepath">certificates</span>
     <h2 style="margin-bottom:32px;">Certificates</h2>
     <div class="cert-grid">
       <div class="cert-item">
@@ -291,8 +280,7 @@
   </section>
 
   <section id="projects">
-    <span class="filepath">projects</span>
-    <h2 style="margin-bottom:8px;">Selected projects</h2>
+    <h2 style="margin-bottom:8px;">Selected Projects</h2>
 
     <div class="project">
       <div class="project-head">
@@ -331,9 +319,8 @@
   </section>
 
   <section id="contact">
-    <span class="filepath">contact</span>
     <div class="contact-inner">
-      <h2>Let's talk</h2>
+      <h2>Contact</h2>
       <p class="contact-line">$ open mailto:EDIT-ME@example.com</p>
       <div class="contact-links">
         <a class="btn" href="EDIT ME: your linkedin url" target="_blank">LinkedIn</a>
