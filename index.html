@@ -150,6 +150,14 @@
   .project-stack span{font-family:var(--mono);font-size:0.72rem;color:var(--text-dim);}
   .project-stack span::after{content:' ·';}
   .project-stack span:last-child::after{content:'';}
+  .cert-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .cert-item{
+    border:1px solid var(--line);
+    padding:18px;
+  }
+  .cert-title{font-family:var(--serif);font-size:1.05rem;margin-bottom:6px;}
+  .cert-issuer{font-family:var(--mono);font-size:0.78rem;color:var(--accent);margin-bottom:4px;}
+  .cert-date{font-family:var(--mono);font-size:0.75rem;color:var(--text-dim);}
   .contact-inner{display:flex;flex-direction:column;gap:20px;align-items:flex-start;}
   .contact-line{font-family:var(--mono);font-size:0.9rem;color:var(--text-dim);}
   .contact-links{display:flex;gap:16px;flex-wrap:wrap;}
@@ -160,6 +168,7 @@
     .about-photo{max-width:180px;}
     .skills-cols{grid-template-columns:1fr;}
     .exp-item{grid-template-columns:1fr;gap:8px;}
+    .cert-grid{grid-template-columns:1fr;}
     section{padding:64px 0;}
   }
 </style>
@@ -168,12 +177,13 @@
 
 <header class="tabs">
   <div class="tabs-inner">
-    <a class="tab brand" href="#home"><span class="dot">●</span> anmol</a>
-    <a class="tab" href="#about">about.md</a>
-    <a class="tab" href="#skills">skills.json</a>
-    <a class="tab" href="#experience">experience.log</a>
-    <a class="tab" href="#projects">projects/</a>
-    <a class="tab" href="#contact">contact.sh</a>
+    <a class="tab" href="#home">Home</a>
+    <a class="tab" href="#about">About</a>
+    <a class="tab" href="#skills">Skills</a>
+    <a class="tab" href="#experience">Experience</a>
+    <a class="tab" href="#certificates">Certificates</a>
+    <a class="tab" href="#projects">Projects</a>
+    <a class="tab" href="#contact">Contact</a>
   </div>
 </header>
 
@@ -249,6 +259,33 @@
         <div class="exp-role">EDIT ME: Role Title</div>
         <div class="exp-org">EDIT ME: Company Name</div>
         <div class="exp-desc">EDIT ME: 1-2 lines describing this role.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="certificates">
+    <span class="filepath">certificates/</span>
+    <h2 style="margin-bottom:32px;">Certificates</h2>
+    <div class="cert-grid">
+      <div class="cert-item">
+        <div class="cert-title">EDIT ME: Certificate Name</div>
+        <div class="cert-issuer">EDIT ME: Issuer</div>
+        <div class="cert-date">Issued: EDIT ME</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-title">EDIT ME: Certificate Name</div>
+        <div class="cert-issuer">EDIT ME: Issuer</div>
+        <div class="cert-date">Issued: EDIT ME</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-title">EDIT ME: Certificate Name</div>
+        <div class="cert-issuer">EDIT ME: Issuer</div>
+        <div class="cert-date">Issued: EDIT ME</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-title">EDIT ME: Certificate Name</div>
+        <div class="cert-issuer">EDIT ME: Issuer</div>
+        <div class="cert-date">Issued: EDIT ME</div>
       </div>
     </div>
   </section>
