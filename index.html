@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Anmol Ratan Agarwal | Portfolio</title>
@@ -9,918 +12,1276 @@
 <meta name="description"
 content="Portfolio of Anmol Ratan Agarwal — Software Engineer in training.">
 
+
+<!-- GOOGLE FONTS -->
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
 rel="stylesheet">
 
+
 <style>
 
-/* =========================
-   GLOBAL
-========================= */
+/* =====================================================
+   BASIC SETTINGS
+===================================================== */
 
 :root{
-  --bg:#070b18;
-  --panel:#0d1426;
-  --panel2:#101a31;
-  --text:#f5f7ff;
-  --muted:#b8c0d4;
-  --line:#263250;
 
-  --pink:#ff2d75;
-  --blue:#168cff;
-  --green:#16b84e;
-  --orange:#ff7417;
-  --purple:#8a45ff;
-  --cyan:#00bfe8;
-  --magenta:#d51aa8;
+    --bg:#070b18;
 
-  --serif:'Fraunces',Georgia,serif;
-  --sans:'Inter',-apple-system,sans-serif;
-  --mono:'JetBrains Mono','Courier New',monospace;
+    --panel:#0d1426;
+
+    --panel2:#101a31;
+
+    --text:#f5f7ff;
+
+    --muted:#b8c0d4;
+
+    --line:#263250;
+
+    --pink:#ff2d75;
+
+    --blue:#168cff;
+
+    --green:#16b84e;
+
+    --orange:#ff7417;
+
+    --purple:#8a45ff;
+
+    --cyan:#00bfe8;
+
+    --magenta:#d51aa8;
+
+    --serif:'Fraunces', Georgia, serif;
+
+    --sans:'Inter', Arial, sans-serif;
+
+    --mono:'JetBrains Mono', monospace;
 }
+
 
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
 }
+
 
 html{
-  scroll-behavior:smooth;
+
+    scroll-behavior:smooth;
+
 }
+
 
 body{
-  background:
+
+    background:
+
     radial-gradient(
-      circle at 50% 0%,
-      #101936 0%,
-      var(--bg) 48%
+        circle at 50% 0%,
+        #101936 0%,
+        #070b18 50%
     );
 
-  color:var(--text);
-  font-family:var(--sans);
-  line-height:1.6;
-  -webkit-font-smoothing:antialiased;
+    color:var(--text);
+
+    font-family:var(--sans);
+
+    line-height:1.6;
+
 }
+
 
 a{
-  color:inherit;
+
+    color:inherit;
+
 }
+
 
 .wrap{
-  max-width:1100px;
-  margin:auto;
-  padding:0 24px;
+
+    max-width:1100px;
+
+    margin:auto;
+
+    padding:0 24px;
+
 }
+
 
 ::selection{
-  background:#ff2d75;
-  color:white;
+
+    background:#ff2d75;
+
+    color:white;
+
 }
 
 
-/* =========================
+/* =====================================================
    NAVIGATION
-========================= */
+===================================================== */
 
 header.tabs{
-  position:sticky;
-  top:0;
-  z-index:50;
 
-  background:rgba(7,11,24,.9);
-  backdrop-filter:blur(14px);
+    position:sticky;
 
-  border-bottom:1px solid var(--line);
+    top:0;
+
+    z-index:100;
+
+    background:rgba(7,11,24,.92);
+
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid var(--line);
+
 }
+
 
 .tabs-inner{
-  max-width:1100px;
-  margin:auto;
 
-  padding:14px 24px;
+    max-width:1100px;
 
-  display:flex;
-  gap:10px;
+    margin:auto;
 
-  overflow-x:auto;
-  scrollbar-width:none;
+    padding:14px 24px;
+
+    display:flex;
+
+    gap:10px;
+
+    overflow-x:auto;
+
+    scrollbar-width:none;
+
 }
+
 
 .tabs-inner::-webkit-scrollbar{
-  display:none;
+
+    display:none;
+
 }
+
 
 .tab{
-  font-family:var(--mono);
-  font-size:.8rem;
 
-  text-decoration:none;
-  color:#fff;
+    font-family:var(--mono);
 
-  padding:10px 18px;
+    font-size:.8rem;
 
-  border-radius:9px;
+    color:white;
 
-  white-space:nowrap;
+    text-decoration:none;
 
-  transition:.25s;
+    padding:10px 18px;
 
-  box-shadow:0 5px 14px rgba(0,0,0,.25);
+    border-radius:9px;
+
+    white-space:nowrap;
+
+    transition:.25s;
+
+    box-shadow:0 5px 14px rgba(0,0,0,.25);
+
 }
+
 
 .tab:hover{
-  transform:translateY(-3px);
-  filter:brightness(1.15);
+
+    transform:translateY(-3px);
+
+    filter:brightness(1.15);
+
 }
+
 
 .tab:nth-child(1){
-  background:#ef2850;
+
+    background:#ef2850;
+
 }
+
 
 .tab:nth-child(2){
-  background:#1676df;
+
+    background:#1676df;
+
 }
+
 
 .tab:nth-child(3){
-  background:#079b42;
+
+    background:#079b42;
+
 }
+
 
 .tab:nth-child(4){
-  background:#f06416;
+
+    background:#f06416;
+
 }
+
 
 .tab:nth-child(5){
-  background:#7c36df;
+
+    background:#7c36df;
+
 }
+
 
 .tab:nth-child(6){
-  background:#008eb7;
+
+    background:#008eb7;
+
 }
+
 
 .tab:nth-child(7){
-  background:#c21791;
+
+    background:#c21791;
+
 }
 
 
-/* =========================
-   SECTIONS
-========================= */
+/* =====================================================
+   HOME
+===================================================== */
 
 section{
-  padding:72px 0;
+
+    padding:70px 0;
+
 }
 
-
-/* =========================
-   HOME
-========================= */
 
 .hero{
-  margin-top:26px;
 
-  padding:46px 34px;
+    margin-top:30px;
 
-  border:1px solid #d31b91;
-  border-radius:20px;
+    padding:50px 35px;
 
-  background:
+    border:1px solid #d31b91;
+
+    border-radius:20px;
+
+    background:
+
     linear-gradient(
-      120deg,
-      rgba(31,9,45,.65),
-      rgba(8,16,39,.9)
+        120deg,
+        rgba(31,9,45,.7),
+        rgba(8,16,39,.95)
     );
 
-  box-shadow:
-    0 0 35px rgba(213,26,168,.08);
+    box-shadow:
+
+    0 0 40px rgba(213,26,168,.1);
+
 }
+
 
 .role{
-  display:inline-block;
 
-  font-family:var(--mono);
-  font-size:.78rem;
+    display:inline-block;
 
-  color:#dc7cff;
+    font-family:var(--mono);
 
-  background:#211044;
+    font-size:.78rem;
 
-  padding:5px 10px;
+    color:#dc7cff;
 
-  border-radius:7px;
+    background:#211044;
 
-  margin-bottom:12px;
+    padding:6px 12px;
+
+    border-radius:7px;
+
+    margin-bottom:15px;
+
 }
+
 
 .hero h1{
-  font-family:var(--serif);
 
-  font-size:clamp(2.7rem,7vw,4.8rem);
+    font-family:var(--serif);
 
-  line-height:1.03;
+    font-size:clamp(
+        2.8rem,
+        7vw,
+        5rem
+    );
 
-  max-width:12ch;
+    line-height:1.03;
 
-  margin-bottom:18px;
+    max-width:12ch;
+
+    margin-bottom:20px;
+
 }
+
 
 .hero h1 em{
-  font-style:normal;
-  color:#ff9b2f;
+
+    font-style:normal;
+
+    color:#ff9b2f;
+
 }
+
 
 .pitch{
-  max-width:65ch;
 
-  font-size:1.08rem;
+    max-width:65ch;
 
-  color:#e6e9f5;
+    font-size:1.08rem;
 
-  margin-bottom:26px;
+    color:#e6e9f5;
+
+    margin-bottom:28px;
+
 }
+
 
 .hero-links{
-  display:flex;
-  gap:14px;
-  flex-wrap:wrap;
+
+    display:flex;
+
+    gap:14px;
+
+    flex-wrap:wrap;
+
 }
+
 
 .btn{
-  font-family:var(--mono);
-  font-size:.85rem;
 
-  padding:12px 20px;
+    font-family:var(--mono);
 
-  border-radius:9px;
+    font-size:.85rem;
 
-  text-decoration:none;
+    padding:12px 20px;
 
-  border:1px solid #8a45ff;
+    border-radius:9px;
 
-  background:#140d28;
+    text-decoration:none;
 
-  transition:.25s;
+    border:1px solid #8a45ff;
+
+    background:#140d28;
+
+    transition:.25s;
+
 }
+
 
 .btn:hover{
-  transform:translateY(-3px);
-  filter:brightness(1.15);
+
+    transform:translateY(-3px);
+
+    filter:brightness(1.15);
+
 }
+
 
 .btn.primary{
-  background:
+
+    background:
+
     linear-gradient(
-      90deg,
-      #ff245f,
-      #ff6a1b
+        90deg,
+        #ff245f,
+        #ff6a1b
     );
 
-  border:none;
+    border:none;
+
 }
 
 
-/* =========================
+/* =====================================================
    COMMON SECTION CARD
-========================= */
+===================================================== */
 
 .section-card{
-  border:1px solid var(--line);
 
-  border-radius:18px;
+    border:1px solid var(--line);
 
-  padding:22px 18px;
+    border-radius:18px;
 
-  background:
+    padding:24px 20px;
+
+    background:
+
     linear-gradient(
-      145deg,
-      rgba(14,23,46,.95),
-      rgba(7,13,28,.95)
+        145deg,
+        rgba(14,23,46,.96),
+        rgba(7,13,28,.96)
     );
 
-  box-shadow:
-    0 12px 30px rgba(0,0,0,.18);
+    box-shadow:
+
+    0 12px 30px rgba(0,0,0,.2);
+
 }
+
 
 .section-title{
-  display:flex;
-  align-items:center;
 
-  gap:14px;
+    display:flex;
 
-  margin-bottom:18px;
+    align-items:center;
+
+    gap:14px;
+
+    margin-bottom:22px;
+
 }
+
 
 .section-title h2{
-  font-family:var(--serif);
-  font-size:2rem;
+
+    font-family:var(--serif);
+
+    font-size:2rem;
+
 }
+
 
 .icon{
-  width:46px;
-  height:46px;
 
-  border-radius:8px;
+    width:46px;
 
-  display:grid;
-  place-items:center;
+    height:46px;
 
-  font-size:1.45rem;
+    border-radius:9px;
 
-  color:white;
+    display:grid;
+
+    place-items:center;
+
+    font-size:1.4rem;
+
 }
 
 
-/* =========================
+/* =====================================================
    ABOUT
-========================= */
+===================================================== */
 
 .about-card{
-  border-color:#168cff;
+
+    border-color:#168cff;
+
 }
+
 
 .about-card .icon{
-  background:#1676df;
+
+    background:#1676df;
+
 }
+
 
 .about-grid{
-  display:grid;
 
-  grid-template-columns:
-    1fr 210px;
+    display:grid;
 
-  gap:18px;
+    grid-template-columns:1fr 220px;
+
+    gap:18px;
+
 }
+
 
 .about-text{
-  display:grid;
 
-  grid-template-columns:
+    display:grid;
+
+    grid-template-columns:
     repeat(3,1fr);
 
-  gap:14px;
+    gap:14px;
+
 }
+
 
 .about-text p{
-  border:1px solid #31548f;
 
-  border-radius:13px;
+    border:1px solid #31548f;
 
-  padding:17px;
+    border-radius:13px;
 
-  background:
-    rgba(8,17,35,.75);
+    padding:18px;
 
-  color:#edf1fc;
+    background:rgba(8,17,35,.75);
+
+    color:#edf1fc;
+
 }
+
 
 .about-photo{
-  border:1px solid #31548f;
 
-  border-radius:13px;
+    border:1px solid #31548f;
 
-  overflow:hidden;
+    border-radius:13px;
 
-  background:#0b1327;
+    overflow:hidden;
 
-  min-height:210px;
+    background:#0b1327;
 
-  display:flex;
+    min-height:220px;
 
-  align-items:center;
-  justify-content:center;
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
 }
+
 
 .about-photo img{
-  width:100%;
-  height:100%;
 
-  min-height:210px;
+    width:100%;
 
-  object-fit:cover;
+    height:100%;
 
-  display:block;
+    min-height:220px;
+
+    object-fit:cover;
+
+    display:block;
+
 }
 
 
-/* =========================
+/* =====================================================
    SKILLS
-========================= */
+===================================================== */
 
 .skills-card{
-  border-color:#0eaa4d;
+
+    border-color:#0eaa4d;
+
 }
+
 
 .skills-card .icon{
-  background:#079b42;
+
+    background:#079b42;
+
 }
+
 
 .skills-cols{
-  display:grid;
 
-  grid-template-columns:
+    display:grid;
+
+    grid-template-columns:
     1fr 1fr;
 
-  gap:14px;
+    gap:14px;
+
 }
+
 
 .skills-col{
-  border:1px solid #225b3b;
 
-  border-radius:13px;
+    border:1px solid #225b3b;
 
-  padding:18px;
+    border-radius:13px;
 
-  background:
-    rgba(3,25,15,.6);
+    padding:20px;
+
+    background:rgba(3,25,15,.6);
+
 }
+
 
 .skills-col h3{
-  font-family:var(--mono);
 
-  font-size:.95rem;
+    font-family:var(--mono);
 
-  color:#36e97d;
+    font-size:.95rem;
 
-  margin-bottom:12px;
+    color:#36e97d;
+
+    margin-bottom:14px;
+
 }
+
 
 .tag-list{
-  display:flex;
 
-  flex-wrap:wrap;
+    display:flex;
 
-  gap:9px;
+    flex-wrap:wrap;
+
+    gap:9px;
+
 }
+
 
 .tag{
-  font-family:var(--mono);
 
-  font-size:.78rem;
+    font-family:var(--mono);
 
-  padding:7px 12px;
+    font-size:.78rem;
 
-  border-radius:7px;
+    padding:7px 12px;
 
-  background:#0e6c35;
+    border-radius:7px;
 
-  color:#fff;
+    background:#0e6c35;
 
-  border:1px solid #1b934e;
+    color:white;
+
+    border:1px solid #1b934e;
+
 }
 
 
-/* =========================
+/* =====================================================
    EXPERIENCE
-========================= */
+===================================================== */
 
 .experience-card{
-  border-color:#f06416;
+
+    border-color:#f06416;
+
 }
+
 
 .experience-card .icon{
-  background:#f06416;
+
+    background:#f06416;
+
 }
+
 
 .exp-item{
-  display:grid;
 
-  grid-template-columns:
-    125px 1fr;
+    display:grid;
 
-  gap:15px;
+    grid-template-columns:
+    130px 1fr;
 
-  padding:14px;
+    gap:16px;
 
-  border:1px solid #70451f;
+    padding:16px;
 
-  border-radius:12px;
+    border:1px solid #70451f;
 
-  background:
-    rgba(30,17,8,.65);
+    border-radius:12px;
 
-  margin-top:10px;
+    background:rgba(30,17,8,.65);
+
+    margin-top:12px;
+
 }
+
 
 .exp-date{
-  font-family:var(--mono);
 
-  font-size:.75rem;
+    font-family:var(--mono);
 
-  color:#ff9b47;
+    font-size:.75rem;
 
-  border:1px solid #70451f;
+    color:#ff9b47;
 
-  border-radius:8px;
+    border:1px solid #70451f;
 
-  padding:10px;
+    border-radius:8px;
+
+    padding:10px;
+
 }
+
 
 .exp-role{
-  font-family:var(--serif);
 
-  font-size:1.15rem;
+    font-family:var(--serif);
+
+    font-size:1.2rem;
+
 }
+
 
 .exp-org{
-  font-family:var(--mono);
 
-  font-size:.8rem;
+    font-family:var(--mono);
 
-  color:#ff9b47;
+    font-size:.8rem;
+
+    color:#ff9b47;
+
 }
+
 
 .exp-desc{
-  color:var(--muted);
 
-  font-size:.9rem;
+    color:var(--muted);
+
+    font-size:.9rem;
+
 }
 
 
-/* =========================
+/* =====================================================
    CERTIFICATES
-========================= */
+===================================================== */
 
 .cert-card{
-  border-color:#7c36df;
+
+    border-color:#7c36df;
+
 }
+
 
 .cert-card .icon{
-  background:#7c36df;
+
+    background:#7c36df;
+
 }
+
 
 .cert-grid{
-  display:grid;
 
-  grid-template-columns:
+    display:grid;
+
+    grid-template-columns:
     1fr 1fr;
 
-  gap:14px;
+    gap:14px;
+
 }
+
 
 .cert-item{
-  border:1px solid #6743a9;
 
-  border-radius:12px;
+    border:1px solid #6743a9;
 
-  padding:17px;
+    border-radius:12px;
 
-  background:
-    rgba(20,10,45,.6);
+    padding:18px;
 
-  transition:.25s;
+    background:rgba(20,10,45,.6);
+
+    transition:.25s;
+
 }
+
 
 .cert-item:hover{
-  transform:translateY(-4px);
 
-  border-color:#a76cff;
+    transform:translateY(-4px);
 
-  box-shadow:
+    border-color:#a76cff;
+
+    box-shadow:
     0 8px 20px rgba(124,54,223,.2);
+
 }
+
 
 .cert-title{
-  font-family:var(--serif);
 
-  font-size:1.05rem;
+    font-family:var(--serif);
+
+    font-size:1.05rem;
+
+    margin-bottom:4px;
+
 }
+
 
 .cert-issuer{
-  font-family:var(--mono);
 
-  font-size:.77rem;
+    font-family:var(--mono);
 
-  color:#b16cff;
+    font-size:.77rem;
+
+    color:#b16cff;
+
 }
+
 
 .cert-date{
-  font-family:var(--mono);
 
-  font-size:.73rem;
+    font-family:var(--mono);
 
-  color:var(--muted);
+    font-size:.73rem;
+
+    color:var(--muted);
+
 }
 
 
-/* =========================
+/* =====================================================
    PROJECTS
-========================= */
+===================================================== */
 
 .projects-card{
-  border-color:#00a9cc;
+
+    border-color:#00a9cc;
+
 }
+
 
 .projects-card .icon{
-  background:#008eb7;
+
+    background:#008eb7;
+
 }
+
 
 .project-grid{
-  display:grid;
 
-  gap:12px;
+    display:grid;
+
+    gap:12px;
+
 }
+
 
 .project{
-  border:1px solid #17647d;
 
-  border-radius:12px;
+    border:1px solid #17647d;
 
-  padding:17px;
+    border-radius:12px;
 
-  background:
-    rgba(4,22,35,.7);
+    padding:18px;
 
-  transition:.25s;
+    background:rgba(4,22,35,.7);
+
+    transition:.25s;
+
 }
+
 
 .project:hover{
-  transform:translateY(-4px);
 
-  border-color:#00dff1;
+    transform:translateY(-4px);
 
-  box-shadow:
+    border-color:#00dff1;
+
+    box-shadow:
     0 8px 20px rgba(0,191,232,.15);
+
 }
+
 
 .project-head{
-  display:flex;
 
-  justify-content:space-between;
+    display:flex;
 
-  gap:14px;
+    justify-content:space-between;
 
-  align-items:center;
+    align-items:center;
+
+    gap:14px;
+
 }
+
 
 .project-title{
-  font-family:var(--serif);
 
-  font-size:1.2rem;
+    font-family:var(--serif);
+
+    font-size:1.2rem;
+
 }
+
 
 .project-links{
-  display:flex;
 
-  gap:12px;
+    display:flex;
 
-  font-family:var(--mono);
+    gap:12px;
 
-  font-size:.78rem;
+    font-family:var(--mono);
+
+    font-size:.78rem;
+
 }
+
 
 .project-links a{
-  color:#00e1f4;
 
-  text-decoration:none;
+    color:#00e1f4;
+
+    text-decoration:none;
+
 }
+
 
 .project-links a:hover{
-  text-decoration:underline;
+
+    text-decoration:underline;
+
 }
+
 
 .project-desc{
-  color:#d2d9e9;
 
-  font-size:.9rem;
+    color:#d2d9e9;
 
-  margin:5px 0;
+    font-size:.9rem;
+
+    margin:6px 0;
+
 }
+
 
 .project-stack{
-  display:flex;
 
-  gap:8px;
+    display:flex;
 
-  flex-wrap:wrap;
+    gap:8px;
+
+    flex-wrap:wrap;
+
 }
+
 
 .project-stack span{
-  font-family:var(--mono);
 
-  font-size:.72rem;
+    font-family:var(--mono);
 
-  color:#00dff1;
-}
+    font-size:.72rem;
 
-.project-stack span::after{
-  content:' •';
-}
+    color:#00dff1;
 
-.project-stack span:last-child::after{
-  content:'';
 }
 
 
-/* =========================
+/* =====================================================
    CONTACT
-========================= */
+===================================================== */
 
 .contact-card{
-  border-color:#d51aa8;
+
+    border-color:#d51aa8;
+
 }
+
 
 .contact-card .icon{
-  background:#d51aa8;
+
+    background:#d51aa8;
+
 }
+
 
 .contact-inner{
-  display:flex;
 
-  flex-direction:column;
+    display:flex;
 
-  gap:14px;
+    flex-direction:column;
+
+    gap:16px;
+
 }
+
 
 .contact-line{
-  font-family:var(--mono);
 
-  font-size:.86rem;
+    font-family:var(--mono);
 
-  color:#8ef3ad;
+    font-size:.86rem;
+
+    color:#8ef3ad;
+
 }
+
 
 .contact-links{
-  display:grid;
 
-  grid-template-columns:
-    repeat(4,1fr);
+    display:grid;
 
-  gap:14px;
+    grid-template-columns:
+    repeat(5,1fr);
+
+    gap:14px;
+
 }
+
 
 .contact-box{
-  padding:20px 12px;
 
-  border-radius:12px;
+    padding:20px 10px;
 
-  color:white;
+    border-radius:12px;
 
-  text-decoration:none;
+    color:white;
 
-  font-weight:700;
+    text-decoration:none;
 
-  text-align:center;
+    font-weight:700;
 
-  transition:.25s;
+    text-align:center;
 
-  box-shadow:
+    transition:.25s;
+
+    box-shadow:
     0 7px 18px rgba(0,0,0,.25);
 
-  border:
+    border:
     1px solid rgba(255,255,255,.12);
+
 }
+
 
 .contact-box:hover{
-  transform:translateY(-5px);
 
-  filter:brightness(1.12);
+    transform:translateY(-5px);
 
-  box-shadow:
+    filter:brightness(1.12);
+
+    box-shadow:
     0 12px 25px rgba(0,0,0,.4);
+
 }
+
 
 .linkedin{
-  background:#0878bd;
+
+    background:#0878bd;
+
 }
+
 
 .github{
-  background:#20242b;
+
+    background:#20242b;
+
 }
+
 
 .discord{
-  background:#5865f2;
+
+    background:#5865f2;
+
 }
+
 
 .email{
-  background:#e52e32;
+
+    background:#e52e32;
+
 }
 
 
-/* =========================
+.instagram{
+
+    background:
+    linear-gradient(
+        135deg,
+        #833ab4,
+        #fd1d1d,
+        #fcb045
+    );
+
+}
+
+
+/* =====================================================
    FOOTER
-========================= */
+===================================================== */
 
 footer{
-  padding:28px 0 45px;
 
-  text-align:center;
+    padding:30px 0 45px;
 
-  border-top:1px solid var(--line);
+    text-align:center;
 
-  color:var(--muted);
+    border-top:1px solid var(--line);
+
+    color:var(--muted);
+
 }
+
 
 footer p{
-  font-family:var(--mono);
 
-  font-size:.75rem;
+    font-family:var(--mono);
+
+    font-size:.75rem;
+
 }
 
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* =====================================================
+   TABLET
+===================================================== */
 
 @media(max-width:850px){
 
-  .about-grid{
-    grid-template-columns:1fr;
-  }
+    .about-grid{
 
-  .about-photo{
-    max-width:220px;
-  }
+        grid-template-columns:1fr;
 
-  .about-text{
-    grid-template-columns:1fr;
-  }
+    }
 
-  .contact-links{
-    grid-template-columns:
-      repeat(2,1fr);
-  }
+
+    .about-photo{
+
+        max-width:220px;
+
+    }
+
+
+    .about-text{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .contact-links{
+
+        grid-template-columns:
+        repeat(3,1fr);
+
+    }
+
 }
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media(max-width:600px){
 
-  .wrap{
-    padding:0 14px;
-  }
+    .wrap{
 
-  .tabs-inner{
-    padding:10px 14px;
-  }
+        padding:0 14px;
 
-  .hero{
-    padding:30px 20px;
-  }
+    }
 
-  .skills-cols,
-  .cert-grid{
-    grid-template-columns:1fr;
-  }
 
-  .exp-item{
-    grid-template-columns:1fr;
-  }
+    .tabs-inner{
 
-  .contact-links{
-    grid-template-columns:
-      1fr 1fr;
-  }
+        padding:10px 14px;
 
-  .section-title h2{
-    font-size:1.65rem;
-  }
+    }
+
+
+    .hero{
+
+        padding:32px 20px;
+
+    }
+
+
+    .skills-cols{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .cert-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .exp-item{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .project-head{
+
+        align-items:flex-start;
+
+        flex-direction:column;
+
+    }
+
+
+    .contact-links{
+
+        grid-template-columns:
+        1fr 1fr;
+
+    }
+
+
+    .section-title h2{
+
+        font-size:1.65rem;
+
+    }
+
 }
 
 </style>
+
 </head>
 
 
 <body>
 
 
-<!-- =========================
+<!-- =====================================================
      NAVIGATION
-========================= -->
+===================================================== -->
 
 <header class="tabs">
 
-  <div class="tabs-inner">
+<div class="tabs-inner">
 
-    <a class="tab" href="#home">
-      Home
-    </a>
+<a class="tab" href="#home">
+Home
+</a>
 
-    <a class="tab" href="#about">
-      About
-    </a>
+<a class="tab" href="#about">
+About
+</a>
 
-    <a class="tab" href="#skills">
-      Skills
-    </a>
+<a class="tab" href="#skills">
+Skills
+</a>
 
-    <a class="tab" href="#experience">
-      Experience
-    </a>
+<a class="tab" href="#experience">
+Experience
+</a>
 
-    <a class="tab" href="#certificates">
-      Certificates
-    </a>
+<a class="tab" href="#certificates">
+Certificates
+</a>
 
-    <a class="tab" href="#projects">
-      Projects
-    </a>
+<a class="tab" href="#projects">
+Projects
+</a>
 
-    <a class="tab" href="#contact">
-      Contact
-    </a>
+<a class="tab" href="#contact">
+Contact
+</a>
 
-  </div>
+</div>
 
 </header>
 
@@ -928,669 +1289,825 @@ footer p{
 <div class="wrap">
 
 
-<!-- =========================
+<!-- =====================================================
      HOME
-========================= -->
+===================================================== -->
 
 <section class="hero" id="home">
 
-  <p class="role">
-    SOFTWARE ENGINEER, IN TRAINING
-  </p>
+<p class="role">
+SOFTWARE ENGINEER, IN TRAINING
+</p>
 
-  <h1>
-    Anmol Ratan
-    <em>Agarwal</em>
-  </h1>
 
-  <p class="pitch">
-    I'm a computer science student passionate about
-    software engineering, artificial intelligence,
-    machine learning, and building useful technology.
-  </p>
+<h1>
 
-  <div class="hero-links">
+Anmol Ratan
 
-    <a href="#projects" class="btn primary">
-      🚀 View Projects
-    </a>
+<em>Agarwal</em>
 
-    <a href="#contact" class="btn">
-      ✉ Get In Touch
-    </a>
+</h1>
 
-  </div>
+
+<p class="pitch">
+
+I'm a computer science student passionate about
+software engineering, artificial intelligence,
+machine learning, and building useful technology.
+
+</p>
+
+
+<div class="hero-links">
+
+<a href="#projects" class="btn primary">
+
+🚀 View Projects
+
+</a>
+
+
+<a href="#contact" class="btn">
+
+✉ Get In Touch
+
+</a>
+
+</div>
 
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      ABOUT
-========================= -->
+===================================================== -->
 
 <section id="about">
 
-  <div class="section-card about-card">
-
-    <div class="section-title">
-
-      <div class="icon">
-        👤
-      </div>
-
-      <h2>
-        About
-      </h2>
-
-    </div>
+<div class="section-card about-card">
 
 
-    <div class="about-grid">
+<div class="section-title">
 
-      <div class="about-text">
+<div class="icon">
+👤
+</div>
 
-        <p>
-          I'm a computer science student at Lovely
-          Professional University with a strong focus on
-          <b style="color:#27a5ff">
-            Machine Learning
-          </b>
-          and
-          <b style="color:#27a5ff">
-            Artificial Intelligence
-          </b>.
-          What excites me most is turning ideas into
-          working systems.
-        </p>
+<h2>
+About
+</h2>
+
+</div>
 
 
-        <p>
-          My toolkit spans
-          <b style="color:#27a5ff">
-            Python, Java, and C++
-          </b>,
-          along with full-stack development using
-          <b style="color:#27a5ff">
-            React, Node.js, and PostgreSQL
-          </b>.
-          I'm drawn to problems that require careful
-          engineering and creative thinking.
-        </p>
+<div class="about-grid">
 
 
-        <p>
-          Outside of coding, I spend my time watching
-          <b style="color:#27a5ff">
-            films
-          </b>,
-          experimenting in the
-          <b style="color:#27a5ff">
-            kitchen
-          </b>,
-          and creating
-          <b style="color:#27a5ff">
-            tech-related content
-          </b>.
-        </p>
-
-      </div>
+<div class="about-text">
 
 
-      <!-- Optional profile photo -->
-      <div class="about-photo">
+<p>
 
-        <img
-          src="profile.jpg"
-          alt="Anmol Ratan Agarwal"
-        >
+I'm a computer science student at
+Lovely Professional University with a
+strong focus on
+<b style="color:#27a5ff">
+Machine Learning
+</b>
+and
+<b style="color:#27a5ff">
+Artificial Intelligence
+</b>.
 
-      </div>
+What excites me most is turning ideas
+into working systems.
 
-    </div>
+</p>
 
-  </div>
+
+<p>
+
+My toolkit spans
+<b style="color:#27a5ff">
+Python, Java, and C++
+</b>,
+along with full-stack development using
+<b style="color:#27a5ff">
+React, Node.js, and PostgreSQL
+</b>.
+
+I'm drawn to problems that require
+careful engineering and creative thinking.
+
+</p>
+
+
+<p>
+
+Outside of coding, I spend my time
+watching
+<b style="color:#27a5ff">
+films
+</b>,
+experimenting in the
+<b style="color:#27a5ff">
+kitchen
+</b>,
+and creating
+<b style="color:#27a5ff">
+tech-related content
+</b>.
+
+</p>
+
+
+</div>
+
+
+<!-- PROFILE IMAGE -->
+
+<div class="about-photo">
+
+<img
+src="profile.jpg"
+alt="Anmol Ratan Agarwal"
+>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      SKILLS
-========================= -->
+===================================================== -->
 
 <section id="skills">
 
-  <div class="section-card skills-card">
-
-    <div class="section-title">
-
-      <div class="icon">
-        ⚡
-      </div>
-
-      <h2>
-        Skills
-      </h2>
-
-    </div>
+<div class="section-card skills-card">
 
 
-    <div class="skills-cols">
+<div class="section-title">
+
+<div class="icon">
+⚡
+</div>
+
+<h2>
+Skills
+</h2>
+
+</div>
 
 
-      <div class="skills-col">
-
-        <h3>
-          Technical Skills
-        </h3>
-
-        <div class="tag-list">
-
-          <span class="tag">
-            Python
-          </span>
-
-          <span class="tag">
-            Java
-          </span>
-
-          <span class="tag">
-            C++
-          </span>
-
-          <span class="tag">
-            React
-          </span>
-
-          <span class="tag">
-            Node.js
-          </span>
-
-          <span class="tag">
-            PostgreSQL
-          </span>
-
-          <span class="tag">
-            SQL
-          </span>
-
-          <span class="tag">
-            Git
-          </span>
-
-        </div>
-
-      </div>
+<div class="skills-cols">
 
 
-      <div class="skills-col">
+<div class="skills-col">
 
-        <h3>
-          Currently Learning / Interested In
-        </h3>
-
-        <div class="tag-list">
-
-          <span class="tag">
-            Systems Programming
-          </span>
-
-          <span class="tag">
-            Compilers
-          </span>
-
-          <span class="tag">
-            Cloud (Azure)
-          </span>
-
-          <span class="tag">
-            Machine Learning
-          </span>
-
-        </div>
-
-      </div>
+<h3>
+Technical Skills
+</h3>
 
 
-    </div>
+<div class="tag-list">
 
-  </div>
+<span class="tag">
+Python
+</span>
+
+<span class="tag">
+Java
+</span>
+
+<span class="tag">
+C++
+</span>
+
+<span class="tag">
+React
+</span>
+
+<span class="tag">
+Node.js
+</span>
+
+<span class="tag">
+PostgreSQL
+</span>
+
+<span class="tag">
+SQL
+</span>
+
+<span class="tag">
+Git
+</span>
+
+</div>
+
+</div>
+
+
+<div class="skills-col">
+
+<h3>
+Currently Learning / Interested In
+</h3>
+
+
+<div class="tag-list">
+
+<span class="tag">
+Systems Programming
+</span>
+
+<span class="tag">
+Compilers
+</span>
+
+<span class="tag">
+Cloud (Azure)
+</span>
+
+<span class="tag">
+Machine Learning
+</span>
+
+<span class="tag">
+Artificial Intelligence
+</span>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      EXPERIENCE
-========================= -->
+===================================================== -->
 
 <section id="experience">
 
-  <div class="section-card experience-card">
-
-    <div class="section-title">
-
-      <div class="icon">
-        💼
-      </div>
-
-      <h2>
-        Experience
-      </h2>
-
-    </div>
+<div class="section-card experience-card">
 
 
-    <div class="exp-item">
+<div class="section-title">
 
-      <div class="exp-date">
-        Month Year
-        <br>
-        —
-        <br>
-        Month Year
-      </div>
+<div class="icon">
+💼
+</div>
 
-      <div>
+<h2>
+Experience
+</h2>
 
-        <div class="exp-role">
-          Role Title
-        </div>
-
-        <div class="exp-org">
-          Company Name
-        </div>
-
-        <div class="exp-desc">
-          1–2 lines on what you actually did
-          and the impact you created.
-        </div>
-
-      </div>
-
-    </div>
+</div>
 
 
-    <div class="exp-item">
+<div class="exp-item">
 
-      <div class="exp-date">
-        Month Year
-        <br>
-        —
-        <br>
-        Month Year
-      </div>
 
-      <div>
+<div class="exp-date">
 
-        <div class="exp-role">
-          Role Title
-        </div>
+Month Year
 
-        <div class="exp-org">
-          Company Name
-        </div>
+<br>
 
-        <div class="exp-desc">
-          1–2 lines describing this role
-          and the work you contributed.
-        </div>
+—
 
-      </div>
+<br>
 
-    </div>
+Month Year
 
-  </div>
+</div>
+
+
+<div>
+
+<div class="exp-role">
+
+Role Title
+
+</div>
+
+
+<div class="exp-org">
+
+Company Name
+
+</div>
+
+
+<div class="exp-desc">
+
+1–2 lines about what you actually
+did and the impact you created.
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="exp-item">
+
+
+<div class="exp-date">
+
+Month Year
+
+<br>
+
+—
+
+<br>
+
+Month Year
+
+</div>
+
+
+<div>
+
+<div class="exp-role">
+
+Role Title
+
+</div>
+
+
+<div class="exp-org">
+
+Company Name
+
+</div>
+
+
+<div class="exp-desc">
+
+1–2 lines describing this role
+and the work you contributed.
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
 
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      CERTIFICATES
-========================= -->
+===================================================== -->
 
 <section id="certificates">
 
-  <div class="section-card cert-card">
-
-    <div class="section-title">
-
-      <div class="icon">
-        🎓
-      </div>
-
-      <h2>
-        Certificates
-      </h2>
-
-    </div>
+<div class="section-card cert-card">
 
 
-    <div class="cert-grid">
+<div class="section-title">
+
+<div class="icon">
+🎓
+</div>
+
+<h2>
+Certificates
+</h2>
+
+</div>
 
 
-      <div class="cert-item">
-
-        <div class="cert-title">
-          Certificate Name
-        </div>
-
-        <div class="cert-issuer">
-          Issuer Name
-        </div>
-
-        <div class="cert-date">
-          Issued: Month Year
-        </div>
-
-      </div>
+<div class="cert-grid">
 
 
-      <div class="cert-item">
+<div class="cert-item">
 
-        <div class="cert-title">
-          Certificate Name
-        </div>
+<div class="cert-title">
 
-        <div class="cert-issuer">
-          Issuer Name
-        </div>
+Certificate Name
 
-        <div class="cert-date">
-          Issued: Month Year
-        </div>
+</div>
 
-      </div>
+<div class="cert-issuer">
 
+Issuer Name
 
-      <div class="cert-item">
+</div>
 
-        <div class="cert-title">
-          Certificate Name
-        </div>
+<div class="cert-date">
 
-        <div class="cert-issuer">
-          Issuer Name
-        </div>
+Issued: Month Year
 
-        <div class="cert-date">
-          Issued: Month Year
-        </div>
+</div>
 
-      </div>
+</div>
 
 
-      <div class="cert-item">
+<div class="cert-item">
 
-        <div class="cert-title">
-          Certificate Name
-        </div>
+<div class="cert-title">
 
-        <div class="cert-issuer">
-          Issuer Name
-        </div>
+Certificate Name
 
-        <div class="cert-date">
-          Issued: Month Year
-        </div>
+</div>
 
-      </div>
+<div class="cert-issuer">
+
+Issuer Name
+
+</div>
+
+<div class="cert-date">
+
+Issued: Month Year
+
+</div>
+
+</div>
 
 
-    </div>
+<div class="cert-item">
 
-  </div>
+<div class="cert-title">
+
+Certificate Name
+
+</div>
+
+<div class="cert-issuer">
+
+Issuer Name
+
+</div>
+
+<div class="cert-date">
+
+Issued: Month Year
+
+</div>
+
+</div>
+
+
+<div class="cert-item">
+
+<div class="cert-title">
+
+Certificate Name
+
+</div>
+
+<div class="cert-issuer">
+
+Issuer Name
+
+</div>
+
+<div class="cert-date">
+
+Issued: Month Year
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      PROJECTS
-========================= -->
+===================================================== -->
 
 <section id="projects">
 
-  <div class="section-card projects-card">
-
-    <div class="section-title">
-
-      <div class="icon">
-        🚀
-      </div>
-
-      <h2>
-        Projects
-      </h2>
-
-    </div>
+<div class="section-card projects-card">
 
 
-    <div class="project-grid">
+<div class="section-title">
+
+<div class="icon">
+🚀
+</div>
+
+<h2>
+Projects
+</h2>
+
+</div>
 
 
-      <div class="project">
-
-        <div class="project-head">
-
-          <span class="project-title">
-            Project Name
-          </span>
-
-          <div class="project-links">
-
-            <a href="#">
-              Live ↗
-            </a>
-
-            <a href="#">
-              Code ↗
-            </a>
-
-          </div>
-
-        </div>
-
-        <p class="project-desc">
-          1–2 sentences on what this project
-          does and why you built it.
-        </p>
-
-        <div class="project-stack">
-
-          <span>
-            React
-          </span>
-
-          <span>
-            Node.js
-          </span>
-
-          <span>
-            PostgreSQL
-          </span>
-
-        </div>
-
-      </div>
+<div class="project-grid">
 
 
-      <div class="project">
-
-        <div class="project-head">
-
-          <span class="project-title">
-            Project Name
-          </span>
-
-          <div class="project-links">
-
-            <a href="#">
-              Code ↗
-            </a>
-
-          </div>
-
-        </div>
-
-        <p class="project-desc">
-          1–2 sentences describing the project
-          and the problem it solves.
-        </p>
-
-        <div class="project-stack">
-
-          <span>
-            C++
-          </span>
-
-          <span>
-            Linux
-          </span>
-
-          <span>
-            System Design
-          </span>
-
-        </div>
-
-      </div>
+<div class="project">
 
 
-      <div class="project">
+<div class="project-head">
 
-        <div class="project-head">
+<span class="project-title">
 
-          <span class="project-title">
-            Project Name
-          </span>
+Project Name
 
-          <div class="project-links">
-
-            <a href="#">
-              Code ↗
-            </a>
-
-          </div>
-
-        </div>
-
-        <p class="project-desc">
-          1–2 sentences describing your
-          key contribution.
-        </p>
-
-        <div class="project-stack">
-
-          <span>
-            Python
-          </span>
-
-          <span>
-            Flask
-          </span>
-
-          <span>
-            ML
-          </span>
-
-        </div>
-
-      </div>
+</span>
 
 
-    </div>
+<div class="project-links">
 
-  </div>
+<a href="#">
+Live ↗
+</a>
+
+<a href="#">
+Code ↗
+</a>
+
+</div>
+
+</div>
+
+
+<p class="project-desc">
+
+1–2 sentences explaining what
+this project does and why you built it.
+
+</p>
+
+
+<div class="project-stack">
+
+<span>
+React
+</span>
+
+<span>
+Node.js
+</span>
+
+<span>
+PostgreSQL
+</span>
+
+</div>
+
+</div>
+
+
+<div class="project">
+
+
+<div class="project-head">
+
+<span class="project-title">
+
+Project Name
+
+</span>
+
+
+<div class="project-links">
+
+<a href="#">
+Code ↗
+</a>
+
+</div>
+
+</div>
+
+
+<p class="project-desc">
+
+1–2 sentences describing the
+project and the problem it solves.
+
+</p>
+
+
+<div class="project-stack">
+
+<span>
+C++
+</span>
+
+<span>
+Linux
+</span>
+
+<span>
+System Design
+</span>
+
+</div>
+
+</div>
+
+
+<div class="project">
+
+
+<div class="project-head">
+
+<span class="project-title">
+
+Project Name
+
+</span>
+
+
+<div class="project-links">
+
+<a href="#">
+Code ↗
+</a>
+
+</div>
+
+</div>
+
+
+<p class="project-desc">
+
+1–2 sentences describing your
+key contribution.
+
+</p>
+
+
+<div class="project-stack">
+
+<span>
+Python
+</span>
+
+<span>
+Flask
+</span>
+
+<span>
+Machine Learning
+</span>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      CONTACT
-========================= -->
+===================================================== -->
 
 <section id="contact">
 
-  <div class="section-card contact-card">
-
-    <div class="section-title">
-
-      <div class="icon">
-        ✉
-      </div>
-
-      <h2>
-        Contact
-      </h2>
-
-    </div>
+<div class="section-card contact-card">
 
 
-    <div class="contact-inner">
+<div class="section-title">
 
-      <p class="contact-line">
-        $ open mailto:anmolragrwl314@gmail.com
-      </p>
+<div class="icon">
+✉
+</div>
 
+<h2>
+Contact
+</h2>
 
-      <div class="contact-links">
-
-
-        <a
-          class="contact-box linkedin"
-          href="https://www.linkedin.com/in/anmol-ratan-agarwal-590494381/"
-          target="_blank"
-          rel="noopener"
-        >
-          LinkedIn
-        </a>
+</div>
 
 
-        <a
-          class="contact-box github"
-          href="https://github.com/anmolragrwl314-source"
-          target="_blank"
-          rel="noopener"
-        >
-          GitHub
-        </a>
+<div class="contact-inner">
 
 
-        <a
-          class="contact-box discord"
-          href="https://discord.com/users/1333868295043940363"
-          target="_blank"
-          rel="noopener"
-        >
-          Discord
-        </a>
+<p class="contact-line">
+
+$ open mailto:anmolragrwl314@gmail.com
+
+</p>
 
 
-        <a
-          class="contact-box email"
-          href="mailto:anmolragrwl314@gmail.com"
-        >
-          Email
-        </a>
+<div class="contact-links">
 
 
-      </div>
+<!-- LINKEDIN -->
 
-    </div>
+<a
+class="contact-box linkedin"
+href="https://www.linkedin.com/in/anmol-ratan-agarwal-590494381/"
+target="_blank"
+rel="noopener"
+>
 
-  </div>
+💼 LinkedIn
+
+</a>
+
+
+<!-- GITHUB -->
+
+<a
+class="contact-box github"
+href="https://github.com/anmolragrwl314-source"
+target="_blank"
+rel="noopener"
+>
+
+🐙 GitHub
+
+</a>
+
+
+<!-- DISCORD -->
+
+<a
+class="contact-box discord"
+href="https://discord.com/users/1333868295043940363"
+target="_blank"
+rel="noopener"
+>
+
+🎮 Discord
+
+</a>
+
+
+<!-- EMAIL -->
+
+<a
+class="contact-box email"
+href="mailto:anmolragrwl314@gmail.com"
+>
+
+✉️ Email
+
+</a>
+
+
+<!-- INSTAGRAM -->
+
+<a
+class="contact-box instagram"
+href="https://www.instagram.com/anmol_agarwal_.01/"
+target="_blank"
+rel="noopener"
+>
+
+📸 Instagram
+
+</a>
+
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      FOOTER
-========================= -->
+===================================================== -->
 
 <footer>
 
-  <p>
-    © 2026 Anmol Ratan Agarwal
-    — Built with ❤️ and lots of ☕
-  </p>
+<p>
+
+© 2026 Anmol Ratan Agarwal
+— Built with ❤️ and lots of ☕
+
+</p>
 
 </footer>
 
@@ -1598,4 +2115,5 @@ footer p{
 </div>
 
 </body>
+
 </html>
