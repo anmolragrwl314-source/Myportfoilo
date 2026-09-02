@@ -1,1279 +1,2119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Anmol Ratan Agarwal | Portfolio</title>
 
-<meta name="description" content="Anmol Ratan Agarwal — Developer in the making, curious about technology and passionate about building.">
+<meta name="description"
+content="Portfolio of Anmol Ratan Agarwal — Software Engineer in training.">
+
+
+<!-- GOOGLE FONTS -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+rel="stylesheet">
+
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+/* =====================================================
+   BASIC SETTINGS
+===================================================== */
 
 :root{
-    --bg:#080808;
-    --bg2:#0d0d0d;
-    --card:#111111;
-    --card2:#151515;
-    --text:#f5f5f5;
-    --muted:#999;
-    --line:#262626;
-    --lime:#c8ff00;
-    --pink:#ff3cac;
-    --cyan:#00e5ff;
+
+    --bg:#070b18;
+
+    --panel:#0d1426;
+
+    --panel2:#101a31;
+
+    --text:#f5f7ff;
+
+    --muted:#b8c0d4;
+
+    --line:#263250;
+
+    --pink:#ff2d75;
+
+    --blue:#168cff;
+
+    --green:#16b84e;
+
+    --orange:#ff7417;
+
+    --purple:#8a45ff;
+
+    --cyan:#00bfe8;
+
+    --magenta:#d51aa8;
+
+    --serif:'Fraunces', Georgia, serif;
+
+    --sans:'Inter', Arial, sans-serif;
+
+    --mono:'JetBrains Mono', monospace;
 }
+
 
 *{
+
     margin:0;
+
     padding:0;
+
     box-sizing:border-box;
-    scroll-behavior:smooth;
+
 }
+
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
 
 body{
-    background:var(--bg);
+
+    background:
+
+    radial-gradient(
+        circle at 50% 0%,
+        #101936 0%,
+        #070b18 50%
+    );
+
     color:var(--text);
-    font-family:Inter,sans-serif;
-    overflow-x:hidden;
+
+    font-family:var(--sans);
+
+    line-height:1.6;
+
 }
+
 
 a{
+
     color:inherit;
-    text-decoration:none;
+
 }
+
+
+.wrap{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    padding:0 24px;
+
+}
+
 
 ::selection{
-    background:var(--lime);
-    color:#000;
+
+    background:#ff2d75;
+
+    color:white;
+
 }
 
-/* BACKGROUND */
 
-body::before{
-    content:"";
-    position:fixed;
-    inset:0;
-    pointer-events:none;
-    background:
-        radial-gradient(circle at 10% 10%,rgba(200,255,0,.08),transparent 25%),
-        radial-gradient(circle at 90% 30%,rgba(255,60,172,.06),transparent 25%),
-        radial-gradient(circle at 50% 90%,rgba(0,229,255,.05),transparent 25%);
-    z-index:-2;
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+header.tabs{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:100;
+
+    background:rgba(7,11,24,.92);
+
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid var(--line);
+
 }
 
-body::after{
-    content:"";
-    position:fixed;
-    inset:0;
-    opacity:.025;
-    pointer-events:none;
-    z-index:-1;
-    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
-}
 
-/* NAVBAR */
+.tabs-inner{
 
-nav{
-    position:fixed;
-    top:16px;
-    left:50%;
-    transform:translateX(-50%);
-    width:min(1180px,calc(100% - 30px));
-    padding:12px 16px;
-    border:1px solid rgba(255,255,255,.1);
-    background:rgba(10,10,10,.78);
-    backdrop-filter:blur(18px);
-    -webkit-backdrop-filter:blur(18px);
-    border-radius:18px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    z-index:1000;
-}
+    max-width:1100px;
 
-.logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    font-family:"Space Grotesk",sans-serif;
-    font-weight:700;
-}
-
-.logo-mark{
-    width:38px;
-    height:38px;
-    border-radius:10px;
-    display:grid;
-    place-items:center;
-    background:var(--lime);
-    color:#000;
-    font-weight:900;
-}
-
-.logo span{
-    font-size:14px;
-}
-
-.nav-links{
-    display:flex;
-    gap:25px;
-    align-items:center;
-}
-
-.nav-links a{
-    color:#aaa;
-    font-size:13px;
-    font-weight:600;
-    transition:.25s;
-}
-
-.nav-links a:hover{
-    color:var(--lime);
-}
-
-.nav-cta{
-    background:#fff;
-    color:#000 !important;
-    padding:10px 15px;
-    border-radius:10px;
-}
-
-.nav-cta:hover{
-    background:var(--lime) !important;
-}
-
-/* GENERAL */
-
-.container{
-    width:min(1180px,calc(100% - 40px));
     margin:auto;
+
+    padding:14px 24px;
+
+    display:flex;
+
+    gap:10px;
+
+    overflow-x:auto;
+
+    scrollbar-width:none;
+
 }
+
+
+.tabs-inner::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+
+.tab{
+
+    font-family:var(--mono);
+
+    font-size:.8rem;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:10px 18px;
+
+    border-radius:9px;
+
+    white-space:nowrap;
+
+    transition:.25s;
+
+    box-shadow:0 5px 14px rgba(0,0,0,.25);
+
+}
+
+
+.tab:hover{
+
+    transform:translateY(-3px);
+
+    filter:brightness(1.15);
+
+}
+
+
+.tab:nth-child(1){
+
+    background:#ef2850;
+
+}
+
+
+.tab:nth-child(2){
+
+    background:#1676df;
+
+}
+
+
+.tab:nth-child(3){
+
+    background:#079b42;
+
+}
+
+
+.tab:nth-child(4){
+
+    background:#f06416;
+
+}
+
+
+.tab:nth-child(5){
+
+    background:#7c36df;
+
+}
+
+
+.tab:nth-child(6){
+
+    background:#008eb7;
+
+}
+
+
+.tab:nth-child(7){
+
+    background:#c21791;
+
+}
+
+
+/* =====================================================
+   HOME
+===================================================== */
 
 section{
-    padding:120px 0;
+
+    padding:70px 0;
+
 }
 
-.section-label{
-    color:var(--lime);
-    font-size:12px;
-    font-weight:800;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    margin-bottom:18px;
-}
-
-.section-title{
-    font-family:"Space Grotesk",sans-serif;
-    font-size:clamp(40px,6vw,78px);
-    line-height:.95;
-    letter-spacing:-4px;
-    max-width:900px;
-}
-
-.section-title span{
-    color:var(--muted);
-}
-
-/* HERO */
 
 .hero{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    padding-top:150px;
-    position:relative;
+
+    margin-top:30px;
+
+    padding:50px 35px;
+
+    border:1px solid #d31b91;
+
+    border-radius:20px;
+
+    background:
+
+    linear-gradient(
+        120deg,
+        rgba(31,9,45,.7),
+        rgba(8,16,39,.95)
+    );
+
+    box-shadow:
+
+    0 0 40px rgba(213,26,168,.1);
+
 }
 
-.hero-grid{
-    display:grid;
-    grid-template-columns:1fr 280px;
-    gap:60px;
-    align-items:end;
+
+.role{
+
+    display:inline-block;
+
+    font-family:var(--mono);
+
+    font-size:.78rem;
+
+    color:#dc7cff;
+
+    background:#211044;
+
+    padding:6px 12px;
+
+    border-radius:7px;
+
+    margin-bottom:15px;
+
 }
 
-.hero-small{
-    color:var(--lime);
-    font-size:13px;
-    font-weight:800;
-    letter-spacing:3px;
-    margin-bottom:25px;
-}
 
 .hero h1{
-    font-family:"Space Grotesk",sans-serif;
-    font-size:clamp(65px,10vw,145px);
-    line-height:.82;
-    letter-spacing:-9px;
-    font-weight:700;
-    max-width:1000px;
+
+    font-family:var(--serif);
+
+    font-size:clamp(
+        2.8rem,
+        7vw,
+        5rem
+    );
+
+    line-height:1.03;
+
+    max-width:12ch;
+
+    margin-bottom:20px;
+
 }
 
-.hero h1 .lime{
-    color:var(--lime);
+
+.hero h1 em{
+
+    font-style:normal;
+
+    color:#ff9b2f;
+
 }
 
-.hero h1 .outline{
-    color:transparent;
-    -webkit-text-stroke:1px #777;
+
+.pitch{
+
+    max-width:65ch;
+
+    font-size:1.08rem;
+
+    color:#e6e9f5;
+
+    margin-bottom:28px;
+
 }
 
-.hero-text{
-    margin-top:35px;
-    color:#aaa;
-    font-size:17px;
-    line-height:1.7;
-    max-width:680px;
-}
 
-.hero-buttons{
+.hero-links{
+
     display:flex;
-    gap:12px;
-    margin-top:30px;
+
+    gap:14px;
+
     flex-wrap:wrap;
+
 }
+
 
 .btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    padding:14px 20px;
-    border-radius:10px;
-    font-weight:700;
-    font-size:13px;
+
+    font-family:var(--mono);
+
+    font-size:.85rem;
+
+    padding:12px 20px;
+
+    border-radius:9px;
+
+    text-decoration:none;
+
+    border:1px solid #8a45ff;
+
+    background:#140d28;
+
+    transition:.25s;
+
+}
+
+
+.btn:hover{
+
+    transform:translateY(-3px);
+
+    filter:brightness(1.15);
+
+}
+
+
+.btn.primary{
+
+    background:
+
+    linear-gradient(
+        90deg,
+        #ff245f,
+        #ff6a1b
+    );
+
+    border:none;
+
+}
+
+
+/* =====================================================
+   COMMON SECTION CARD
+===================================================== */
+
+.section-card{
+
     border:1px solid var(--line);
-    transition:.3s;
+
+    border-radius:18px;
+
+    padding:24px 20px;
+
+    background:
+
+    linear-gradient(
+        145deg,
+        rgba(14,23,46,.96),
+        rgba(7,13,28,.96)
+    );
+
+    box-shadow:
+
+    0 12px 30px rgba(0,0,0,.2);
+
 }
 
-.btn-primary{
-    background:var(--lime);
-    color:#000;
-    border-color:var(--lime);
+
+.section-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    margin-bottom:22px;
+
 }
 
-.btn-primary:hover{
-    transform:translateY(-4px);
-    box-shadow:0 12px 30px rgba(200,255,0,.18);
+
+.section-title h2{
+
+    font-family:var(--serif);
+
+    font-size:2rem;
+
 }
 
-.btn-secondary{
-    color:#fff;
+
+.icon{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:9px;
+
+    display:grid;
+
+    place-items:center;
+
+    font-size:1.4rem;
+
 }
 
-.btn-secondary:hover{
-    border-color:var(--lime);
-    color:var(--lime);
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.about-card{
+
+    border-color:#168cff;
+
 }
 
-.profile{
-    width:250px;
-    height:300px;
-    object-fit:cover;
-    border-radius:25px;
-    border:1px solid #333;
-    filter:grayscale(100%);
-    transition:.5s;
+
+.about-card .icon{
+
+    background:#1676df;
+
 }
 
-.profile:hover{
-    filter:grayscale(0);
-    transform:rotate(2deg) scale(1.03);
-}
-
-.profile-wrap{
-    position:relative;
-}
-
-.profile-wrap::after{
-    content:"AR";
-    position:absolute;
-    bottom:-14px;
-    right:-14px;
-    background:var(--lime);
-    color:#000;
-    padding:12px 14px;
-    border-radius:10px;
-    font-weight:900;
-}
-
-/* MARQUEE */
-
-.marquee{
-    border-top:1px solid var(--line);
-    border-bottom:1px solid var(--line);
-    padding:18px 0;
-    overflow:hidden;
-    white-space:nowrap;
-}
-
-.marquee-track{
-    display:inline-block;
-    animation:move 22s linear infinite;
-    font-family:"Space Grotesk",sans-serif;
-    font-size:25px;
-    font-weight:700;
-    color:#333;
-}
-
-.marquee-track span{
-    color:var(--lime);
-    margin:0 20px;
-}
-
-@keyframes move{
-    from{transform:translateX(0)}
-    to{transform:translateX(-50%)}
-}
-
-/* ABOUT */
 
 .about-grid{
+
     display:grid;
-    grid-template-columns:1.4fr 1fr;
-    gap:50px;
-    margin-top:60px;
+
+    grid-template-columns:1fr 220px;
+
+    gap:18px;
+
 }
 
-.about-main{
-    font-family:"Space Grotesk",sans-serif;
-    font-size:30px;
-    line-height:1.25;
-}
 
-.about-main span{
-    color:var(--lime);
-}
+.about-text{
 
-.about-side{
-    color:#999;
-    line-height:1.8;
-    font-size:15px;
-}
-
-.about-side p{
-    margin-bottom:20px;
-}
-
-.stats{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:12px;
-    margin-top:40px;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:14px;
+
 }
 
-.stat{
-    padding:22px;
-    border:1px solid var(--line);
-    border-radius:14px;
-    background:var(--card);
+
+.about-text p{
+
+    border:1px solid #31548f;
+
+    border-radius:13px;
+
+    padding:18px;
+
+    background:rgba(8,17,35,.75);
+
+    color:#edf1fc;
+
 }
 
-.stat strong{
-    display:block;
-    font-size:30px;
-    color:var(--lime);
-    margin-bottom:7px;
-}
 
-.stat small{
-    color:#777;
-}
+.about-photo{
 
-/* SKILLS */
+    border:1px solid #31548f;
 
-.skills-grid{
-    margin-top:60px;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:16px;
-}
+    border-radius:13px;
 
-.skill-card{
-    background:var(--card);
-    border:1px solid var(--line);
-    border-radius:18px;
-    padding:30px;
-    transition:.3s;
-}
+    overflow:hidden;
 
-.skill-card:hover{
-    transform:translateY(-7px);
-    border-color:#555;
-}
+    background:#0b1327;
 
-.skill-number{
-    color:#444;
-    font-size:12px;
-    font-weight:800;
-    margin-bottom:35px;
-}
+    min-height:220px;
 
-.skill-card h3{
-    font-family:"Space Grotesk",sans-serif;
-    font-size:25px;
-    margin-bottom:20px;
-}
-
-.tags{
     display:flex;
-    gap:8px;
-    flex-wrap:wrap;
+
+    align-items:center;
+
+    justify-content:center;
+
 }
+
+
+.about-photo img{
+
+    width:100%;
+
+    height:100%;
+
+    min-height:220px;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+
+/* =====================================================
+   SKILLS
+===================================================== */
+
+.skills-card{
+
+    border-color:#0eaa4d;
+
+}
+
+
+.skills-card .icon{
+
+    background:#079b42;
+
+}
+
+
+.skills-cols{
+
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:14px;
+
+}
+
+
+.skills-col{
+
+    border:1px solid #225b3b;
+
+    border-radius:13px;
+
+    padding:20px;
+
+    background:rgba(3,25,15,.6);
+
+}
+
+
+.skills-col h3{
+
+    font-family:var(--mono);
+
+    font-size:.95rem;
+
+    color:#36e97d;
+
+    margin-bottom:14px;
+
+}
+
+
+.tag-list{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:9px;
+
+}
+
 
 .tag{
-    border:1px solid #292929;
-    padding:8px 11px;
+
+    font-family:var(--mono);
+
+    font-size:.78rem;
+
+    padding:7px 12px;
+
+    border-radius:7px;
+
+    background:#0e6c35;
+
+    color:white;
+
+    border:1px solid #1b934e;
+
+}
+
+
+/* =====================================================
+   EXPERIENCE
+===================================================== */
+
+.experience-card{
+
+    border-color:#f06416;
+
+}
+
+
+.experience-card .icon{
+
+    background:#f06416;
+
+}
+
+
+.exp-item{
+
+    display:grid;
+
+    grid-template-columns:
+    130px 1fr;
+
+    gap:16px;
+
+    padding:16px;
+
+    border:1px solid #70451f;
+
+    border-radius:12px;
+
+    background:rgba(30,17,8,.65);
+
+    margin-top:12px;
+
+}
+
+
+.exp-date{
+
+    font-family:var(--mono);
+
+    font-size:.75rem;
+
+    color:#ff9b47;
+
+    border:1px solid #70451f;
+
     border-radius:8px;
-    color:#aaa;
-    font-size:12px;
+
+    padding:10px;
+
 }
 
-/* EXPERIENCE */
 
-.timeline{
-    margin-top:60px;
-    border-top:1px solid var(--line);
+.exp-role{
+
+    font-family:var(--serif);
+
+    font-size:1.2rem;
+
 }
 
-.timeline-item{
+
+.exp-org{
+
+    font-family:var(--mono);
+
+    font-size:.8rem;
+
+    color:#ff9b47;
+
+}
+
+
+.exp-desc{
+
+    color:var(--muted);
+
+    font-size:.9rem;
+
+}
+
+
+/* =====================================================
+   CERTIFICATES
+===================================================== */
+
+.cert-card{
+
+    border-color:#7c36df;
+
+}
+
+
+.cert-card .icon{
+
+    background:#7c36df;
+
+}
+
+
+.cert-grid{
+
     display:grid;
-    grid-template-columns:180px 1fr;
-    gap:40px;
-    padding:35px 0;
-    border-bottom:1px solid var(--line);
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:14px;
+
 }
 
-.timeline-date{
-    color:var(--lime);
-    font-size:12px;
-    font-weight:800;
-    letter-spacing:1px;
+
+.cert-item{
+
+    border:1px solid #6743a9;
+
+    border-radius:12px;
+
+    padding:18px;
+
+    background:rgba(20,10,45,.6);
+
+    transition:.25s;
+
 }
 
-.timeline-item h3{
-    font-family:"Space Grotesk",sans-serif;
-    font-size:27px;
-    margin-bottom:10px;
+
+.cert-item:hover{
+
+    transform:translateY(-4px);
+
+    border-color:#a76cff;
+
+    box-shadow:
+    0 8px 20px rgba(124,54,223,.2);
+
 }
 
-.timeline-item p{
-    color:#888;
-    line-height:1.7;
+
+.cert-title{
+
+    font-family:var(--serif);
+
+    font-size:1.05rem;
+
+    margin-bottom:4px;
+
 }
 
-/* PROJECTS */
 
-.projects{
+.cert-issuer{
+
+    font-family:var(--mono);
+
+    font-size:.77rem;
+
+    color:#b16cff;
+
+}
+
+
+.cert-date{
+
+    font-family:var(--mono);
+
+    font-size:.73rem;
+
+    color:var(--muted);
+
+}
+
+
+/* =====================================================
+   PROJECTS
+===================================================== */
+
+.projects-card{
+
+    border-color:#00a9cc;
+
+}
+
+
+.projects-card .icon{
+
+    background:#008eb7;
+
+}
+
+
+.project-grid{
+
     display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:18px;
-    margin-top:60px;
+
+    gap:12px;
+
 }
+
 
 .project{
-    min-height:350px;
-    border:1px solid var(--line);
-    border-radius:20px;
-    background:linear-gradient(145deg,#141414,#0d0d0d);
-    padding:30px;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-    transition:.35s;
-    overflow:hidden;
-    position:relative;
+
+    border:1px solid #17647d;
+
+    border-radius:12px;
+
+    padding:18px;
+
+    background:rgba(4,22,35,.7);
+
+    transition:.25s;
+
 }
 
-.project::before{
-    content:"";
-    position:absolute;
-    width:220px;
-    height:220px;
-    border-radius:50%;
-    background:var(--lime);
-    filter:blur(100px);
-    opacity:.06;
-    right:-100px;
-    top:-100px;
-}
 
 .project:hover{
-    transform:translateY(-8px);
-    border-color:#444;
+
+    transform:translateY(-4px);
+
+    border-color:#00dff1;
+
+    box-shadow:
+    0 8px 20px rgba(0,191,232,.15);
+
 }
 
-.project-top{
+
+.project-head{
+
     display:flex;
+
     justify-content:space-between;
+
+    align-items:center;
+
+    gap:14px;
+
 }
 
-.project-index{
-    font-size:12px;
-    color:#555;
-    font-weight:800;
+
+.project-title{
+
+    font-family:var(--serif);
+
+    font-size:1.2rem;
+
 }
 
-.project-arrow{
-    font-size:25px;
-    color:var(--lime);
+
+.project-links{
+
+    display:flex;
+
+    gap:12px;
+
+    font-family:var(--mono);
+
+    font-size:.78rem;
+
 }
 
-.project h3{
-    font-family:"Space Grotesk",sans-serif;
-    font-size:35px;
-    margin-bottom:12px;
+
+.project-links a{
+
+    color:#00e1f4;
+
+    text-decoration:none;
+
 }
 
-.project p{
-    color:#888;
-    max-width:520px;
-    line-height:1.7;
+
+.project-links a:hover{
+
+    text-decoration:underline;
+
 }
 
-.project-bottom{
-    margin-top:30px;
+
+.project-desc{
+
+    color:#d2d9e9;
+
+    font-size:.9rem;
+
+    margin:6px 0;
+
 }
 
-.project-status{
-    display:inline-block;
-    border:1px solid #292929;
-    padding:7px 10px;
-    border-radius:20px;
-    color:#777;
-    font-size:11px;
+
+.project-stack{
+
+    display:flex;
+
+    gap:8px;
+
+    flex-wrap:wrap;
+
 }
 
-/* CERTIFICATES */
 
-.certs{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
+.project-stack span{
+
+    font-family:var(--mono);
+
+    font-size:.72rem;
+
+    color:#00dff1;
+
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact-card{
+
+    border-color:#d51aa8;
+
+}
+
+
+.contact-card .icon{
+
+    background:#d51aa8;
+
+}
+
+
+.contact-inner{
+
+    display:flex;
+
+    flex-direction:column;
+
     gap:16px;
-    margin-top:60px;
+
 }
 
-.cert{
-    padding:28px;
-    min-height:220px;
-    border:1px solid var(--line);
-    background:var(--card);
-    border-radius:18px;
-    transition:.3s;
+
+.contact-line{
+
+    font-family:var(--mono);
+
+    font-size:.86rem;
+
+    color:#8ef3ad;
+
 }
 
-.cert:hover{
-    transform:translateY(-5px);
-    border-color:var(--lime);
-}
-
-.cert small{
-    color:var(--lime);
-    font-weight:800;
-}
-
-.cert h3{
-    margin-top:45px;
-    font-family:"Space Grotesk",sans-serif;
-    font-size:22px;
-}
-
-.cert p{
-    margin-top:10px;
-    color:#777;
-    font-size:13px;
-}
-
-/* CONTACT */
-
-.contact-box{
-    margin-top:60px;
-    padding:60px;
-    border:1px solid var(--line);
-    border-radius:25px;
-    background:
-        radial-gradient(circle at 90% 10%,rgba(200,255,0,.1),transparent 30%),
-        #101010;
-}
-
-.contact-box h2{
-    font-family:"Space Grotesk",sans-serif;
-    font-size:clamp(45px,7vw,90px);
-    line-height:.9;
-    letter-spacing:-5px;
-    max-width:800px;
-}
-
-.contact-box h2 span{
-    color:var(--lime);
-}
 
 .contact-links{
-    margin-top:45px;
+
     display:grid;
-    grid-template-columns:repeat(5,1fr);
-    gap:10px;
+
+    grid-template-columns:
+    repeat(5,1fr);
+
+    gap:14px;
+
 }
 
-.contact-link{
-    padding:16px;
-    border:1px solid #292929;
-    border-radius:10px;
-    text-align:center;
-    font-size:12px;
+
+.contact-box{
+
+    padding:20px 10px;
+
+    border-radius:12px;
+
+    color:white;
+
+    text-decoration:none;
+
     font-weight:700;
-    transition:.3s;
+
+    text-align:center;
+
+    transition:.25s;
+
+    box-shadow:
+    0 7px 18px rgba(0,0,0,.25);
+
+    border:
+    1px solid rgba(255,255,255,.12);
+
 }
 
-.contact-link:hover{
-    background:var(--lime);
-    color:#000;
-    border-color:var(--lime);
-    transform:translateY(-4px);
+
+.contact-box:hover{
+
+    transform:translateY(-5px);
+
+    filter:brightness(1.12);
+
+    box-shadow:
+    0 12px 25px rgba(0,0,0,.4);
+
 }
 
-/* FOOTER */
+
+.linkedin{
+
+    background:#0878bd;
+
+}
+
+
+.github{
+
+    background:#20242b;
+
+}
+
+
+.discord{
+
+    background:#5865f2;
+
+}
+
+
+.email{
+
+    background:#e52e32;
+
+}
+
+
+.instagram{
+
+    background:
+    linear-gradient(
+        135deg,
+        #833ab4,
+        #fd1d1d,
+        #fcb045
+    );
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
 
 footer{
-    padding:30px 0 50px;
-    display:flex;
-    justify-content:space-between;
-    color:#555;
-    font-size:11px;
-    letter-spacing:1px;
+
+    padding:30px 0 45px;
+
+    text-align:center;
+
+    border-top:1px solid var(--line);
+
+    color:var(--muted);
+
 }
 
-/* REVEAL */
 
-.reveal{
-    opacity:0;
-    transform:translateY(35px);
-    transition:opacity .8s ease,transform .8s ease;
+footer p{
+
+    font-family:var(--mono);
+
+    font-size:.75rem;
+
 }
 
-.reveal.show{
-    opacity:1;
-    transform:translateY(0);
-}
 
-/* MOBILE */
+/* =====================================================
+   TABLET
+===================================================== */
 
-@media(max-width:900px){
+@media(max-width:850px){
 
-    .nav-links a:not(.nav-cta){
-        display:none;
-    }
+    .about-grid{
 
-    .hero-grid{
         grid-template-columns:1fr;
+
     }
 
-    .profile-wrap{
-        display:none;
+
+    .about-photo{
+
+        max-width:220px;
+
     }
 
-    .skills-grid,
-    .certs{
-        grid-template-columns:1fr 1fr;
+
+    .about-text{
+
+        grid-template-columns:1fr;
+
     }
+
 
     .contact-links{
-        grid-template-columns:repeat(2,1fr);
+
+        grid-template-columns:
+        repeat(3,1fr);
+
     }
+
 }
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media(max-width:600px){
 
-    section{
-        padding:85px 0;
+    .wrap{
+
+        padding:0 14px;
+
     }
 
-    .container{
-        width:min(100% - 28px,1180px);
+
+    .tabs-inner{
+
+        padding:10px 14px;
+
     }
 
-    nav{
-        top:10px;
-        width:calc(100% - 20px);
-    }
-
-    .logo span{
-        display:none;
-    }
 
     .hero{
-        padding-top:130px;
+
+        padding:32px 20px;
+
     }
 
-    .hero h1{
-        font-size:64px;
-        letter-spacing:-5px;
-    }
 
-    .hero-text{
-        font-size:15px;
-    }
+    .skills-cols{
 
-    .section-title{
-        font-size:48px;
-        letter-spacing:-3px;
-    }
-
-    .about-grid{
         grid-template-columns:1fr;
+
     }
 
-    .about-main{
-        font-size:25px;
-    }
 
-    .stats{
+    .cert-grid{
+
         grid-template-columns:1fr;
+
     }
 
-    .skills-grid,
-    .certs,
-    .projects{
+
+    .exp-item{
+
         grid-template-columns:1fr;
+
     }
 
-    .timeline-item{
-        grid-template-columns:1fr;
-        gap:12px;
+
+    .project-head{
+
+        align-items:flex-start;
+
+        flex-direction:column;
+
     }
 
-    .contact-box{
-        padding:30px 20px;
-    }
-
-    .contact-box h2{
-        font-size:52px;
-        letter-spacing:-3px;
-    }
 
     .contact-links{
-        grid-template-columns:1fr 1fr;
+
+        grid-template-columns:
+        1fr 1fr;
+
     }
 
-    footer{
-        flex-direction:column;
-        gap:10px;
+
+    .section-title h2{
+
+        font-size:1.65rem;
+
     }
+
 }
+
 </style>
+
 </head>
+
 
 <body>
 
-<!-- NAVBAR -->
 
-<nav>
-    <a href="#home" class="logo">
-        <div class="logo-mark">AR</div>
-        <span>ANMOL RATAN</span>
-    </a>
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
 
-    <div class="nav-links">
-        <a href="#about">ABOUT</a>
-        <a href="#skills">SKILLS</a>
-        <a href="#experience">EXPERIENCE</a>
-        <a href="#projects">PROJECTS</a>
-        <a href="#certificates">CERTS</a>
-        <a href="#contact" class="nav-cta">LET'S TALK</a>
-    </div>
-</nav>
+<header class="tabs">
+
+<div class="tabs-inner">
+
+<a class="tab" href="#home">
+Home
+</a>
+
+<a class="tab" href="#about">
+About
+</a>
+
+<a class="tab" href="#skills">
+Skills
+</a>
+
+<a class="tab" href="#experience">
+Experience
+</a>
+
+<a class="tab" href="#certificates">
+Certificates
+</a>
+
+<a class="tab" href="#projects">
+Projects
+</a>
+
+<a class="tab" href="#contact">
+Contact
+</a>
+
+</div>
+
+</header>
 
 
-<!-- HERO -->
+<div class="wrap">
+
+
+<!-- =====================================================
+     HOME
+===================================================== -->
 
 <section class="hero" id="home">
-    <div class="container hero-grid">
 
-        <div>
-            <div class="hero-small">
-                DEVELOPER · LEARNER · BUILDER
-            </div>
+<p class="role">
+SOFTWARE ENGINEER, IN TRAINING
+</p>
 
-            <h1>
-                BUILD.<br>
-                <span class="lime">BREAK.</span><br>
-                <span class="outline">REPEAT.</span>
-            </h1>
 
-            <p class="hero-text">
-                I'm Anmol Ratan Agarwal — a developer in the making,
-                curious about technology, obsessed with learning,
-                and always looking for the next thing worth building.
-            </p>
+<h1>
 
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">
-                    VIEW MY WORK ↗
-                </a>
+Anmol Ratan
 
-                <a href="#contact" class="btn btn-secondary">
-                    CONTACT ME
-                </a>
-            </div>
-        </div>
+<em>Agarwal</em>
 
-        <div class="profile-wrap">
-            <img
-                src="profile.jpg"
-                alt="Anmol Ratan Agarwal"
-                class="profile"
-                onerror="this.style.display='none'"
-            >
-        </div>
+</h1>
 
-    </div>
+
+<p class="pitch">
+
+I'm a computer science student passionate about
+software engineering, artificial intelligence,
+machine learning, and building useful technology.
+
+</p>
+
+
+<div class="hero-links">
+
+<a href="#projects" class="btn primary">
+
+🚀 View Projects
+
+</a>
+
+
+<a href="#contact" class="btn">
+
+✉ Get In Touch
+
+</a>
+
+</div>
+
 </section>
 
 
-<!-- MARQUEE -->
-
-<div class="marquee">
-    <div class="marquee-track">
-        CURIOUS BY DEFAULT
-        <span>✦</span>
-        BUILDING EVERY DAY
-        <span>✦</span>
-        LEARNING THROUGH EXPERIMENTS
-        <span>✦</span>
-        TECHNOLOGY + CREATIVITY
-        <span>✦</span>
-        CURIOUS BY DEFAULT
-        <span>✦</span>
-        BUILDING EVERY DAY
-        <span>✦</span>
-    </div>
-</div>
-
-
-<!-- ABOUT -->
+<!-- =====================================================
+     ABOUT
+===================================================== -->
 
 <section id="about">
-    <div class="container reveal">
 
-        <div class="section-label">01 / ABOUT</div>
+<div class="section-card about-card">
 
-        <h2 class="section-title">
-            TECHNOLOGY CHANGES FAST.
-            <span>CURIOSITY SHOULDN'T.</span>
-        </h2>
 
-        <div class="about-grid">
+<div class="section-title">
 
-            <div class="about-main">
-                I learn by <span>building</span>,
-                break things by <span>experimenting</span>,
-                and get better by doing it again.
-            </div>
+<div class="icon">
+👤
+</div>
 
-            <div class="about-side">
-                <p>
-                    I'm interested in technology, development,
-                    cybersecurity, cloud, AI and the endless
-                    possibilities that come from combining them.
-                </p>
+<h2>
+About
+</h2>
 
-                <p>
-                    Right now, I'm focused on improving my technical
-                    foundation while turning ideas into real projects.
-                </p>
-
-                <p>
-                    My goal is simple: keep learning, keep building,
-                    and create things I'm genuinely proud of.
-                </p>
-            </div>
-
-        </div>
-
-        <div class="stats">
-
-            <div class="stat">
-                <strong>01</strong>
-                <small>CURIOUS MIND</small>
-            </div>
-
-            <div class="stat">
-                <strong>∞</strong>
-                <small>THINGS TO LEARN</small>
-            </div>
-
-            <div class="stat">
-                <strong>24/7</strong>
-                <small>BUILDING MODE</small>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-
-<!-- SKILLS -->
-
-<section id="skills">
-    <div class="container reveal">
-
-        <div class="section-label">02 / SKILLS</div>
-
-        <h2 class="section-title">
-            MY <span>TOOLKIT.</span>
-        </h2>
-
-        <div class="skills-grid">
-
-            <div class="skill-card">
-                <div class="skill-number">01</div>
-                <h3>PROGRAMMING</h3>
-
-                <div class="tags">
-                    <span class="tag">C</span>
-                    <span class="tag">C++</span>
-                    <span class="tag">Python</span>
-                    <span class="tag">HTML</span>
-                    <span class="tag">CSS</span>
-                    <span class="tag">JavaScript</span>
-                </div>
-            </div>
-
-            <div class="skill-card">
-                <div class="skill-number">02</div>
-                <h3>TECHNOLOGY</h3>
-
-                <div class="tags">
-                    <span class="tag">Git</span>
-                    <span class="tag">GitHub</span>
-                    <span class="tag">Linux</span>
-                    <span class="tag">Cybersecurity</span>
-                    <span class="tag">Cloud</span>
-                    <span class="tag">AI</span>
-                </div>
-            </div>
-
-            <div class="skill-card">
-                <div class="skill-number">03</div>
-                <h3>CREATIVE STACK</h3>
-
-                <div class="tags">
-                    <span class="tag">UI Design</span>
-                    <span class="tag">Web Design</span>
-                    <span class="tag">Problem Solving</span>
-                    <span class="tag">Research</span>
-                    <span class="tag">Learning</span>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-
-<!-- EXPERIENCE -->
-
-<section id="experience">
-    <div class="container reveal">
-
-        <div class="section-label">03 / EXPERIENCE</div>
-
-        <h2 class="section-title">
-            THE <span>JOURNEY.</span>
-        </h2>
-
-        <div class="timeline">
-
-            <div class="timeline-item">
-                <div class="timeline-date">2026 — PRESENT</div>
-
-                <div>
-                    <h3>DEVELOPER IN THE MAKING</h3>
-                    <p>
-                        Currently focused on strengthening programming,
-                        web development and technology fundamentals
-                        through continuous learning and projects.
-                    </p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-date">ONGOING</div>
-
-                <div>
-                    <h3>EXPERIMENTING & BUILDING</h3>
-                    <p>
-                        Exploring different areas of technology and
-                        turning concepts into practical experiments.
-                    </p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-date">NEXT →</div>
-
-                <div>
-                    <h3>MORE TO COME</h3>
-                    <p>
-                        This section will evolve as new internships,
-                        achievements and real-world experiences are added.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-
-<!-- PROJECTS -->
-
-<section id="projects">
-    <div class="container reveal">
-
-        <div class="section-label">04 / PROJECTS</div>
-
-        <h2 class="section-title">
-            THINGS I'VE <span>BUILT.</span>
-        </h2>
-
-        <div class="projects">
-
-            <div class="project">
-                <div class="project-top">
-                    <span class="project-index">PROJECT / 01</span>
-                    <span class="project-arrow">↗</span>
-                </div>
-
-                <div>
-                    <h3>PORTFOLIO</h3>
-                    <p>
-                        A personal portfolio designed to showcase
-                        my skills, learning journey and future work.
-                    </p>
-                </div>
-
-                <div class="project-bottom">
-                    <span class="project-status">
-                        CURRENT PROJECT
-                    </span>
-                </div>
-            </div>
-
-
-            <div class="project">
-                <div class="project-top">
-                    <span class="project-index">PROJECT / 02</span>
-                    <span class="project-arrow">↗</span>
-                </div>
-
-                <div>
-                    <h3>COMING SOON</h3>
-                    <p>
-                        A new project is currently being explored.
-                        Something interesting is coming here.
-                    </p>
-                </div>
-
-                <div class="project-bottom">
-                    <span class="project-status">
-                        IN PROGRESS
-                    </span>
-                </div>
-            </div>
-
-
-            <div class="project">
-                <div class="project-top">
-                    <span class="project-index">PROJECT / 03</span>
-                    <span class="project-arrow">↗</span>
-                </div>
-
-                <div>
-                    <h3>EXPERIMENT</h3>
-                    <p>
-                        A space for technical experiments,
-                        ideas and things I build while learning.
-                    </p>
-                </div>
-
-                <div class="project-bottom">
-                    <span class="project-status">
-                        EXPLORING
-                    </span>
-                </div>
-            </div>
-
-
-            <div class="project">
-                <div class="project-top">
-                    <span class="project-index">PROJECT / 04</span>
-                    <span class="project-arrow">↗</span>
-                </div>
-
-                <div>
-                    <h3>FUTURE BUILD</h3>
-                    <p>
-                        The next big idea hasn't been decided yet.
-                        That's part of the fun.
-                    </p>
-                </div>
-
-                <div class="project-bottom">
-                    <span class="project-status">
-                        LOADING...
-                    </span>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-
-<!-- CERTIFICATES -->
-
-<section id="certificates">
-    <div class="container reveal">
-
-        <div class="section-label">05 / CERTIFICATES</div>
-
-        <h2 class="section-title">
-            PROOF OF <span>LEARNING.</span>
-        </h2>
-
-        <div class="certs">
-
-            <div class="cert">
-                <small>CERTIFICATE / 01</small>
-                <h3>YOUR CERTIFICATE</h3>
-                <p>
-                    Certificate details can be added here.
-                </p>
-            </div>
-
-            <div class="cert">
-                <small>CERTIFICATE / 02</small>
-                <h3>YOUR CERTIFICATE</h3>
-                <p>
-                    Certificate details can be added here.
-                </p>
-            </div>
-
-            <div class="cert">
-                <small>CERTIFICATE / 03</small>
-                <h3>YOUR CERTIFICATE</h3>
-                <p>
-                    Certificate details can be added here.
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-
-<!-- CONTACT -->
-
-<section id="contact">
-    <div class="container reveal">
-
-        <div class="section-label">06 / CONTACT</div>
-
-        <div class="contact-box">
-
-            <h2>
-                GOT AN IDEA?
-                <span>LET'S BUILD IT.</span>
-            </h2>
-
-            <div class="contact-links">
-
-                <a
-                    class="contact-link"
-                    href="https://www.linkedin.com/in/anmol-ratan-agarwal-590494381/"
-                    target="_blank"
-                    rel="noopener"
-                >
-                    LINKEDIN ↗
-                </a>
-
-                <a
-                    class="contact-link"
-                    href="https://github.com/anmolratanagarwal"
-                    target="_blank"
-                    rel="noopener"
-                >
-                    GITHUB ↗
-                </a>
-
-                <a
-                    class="contact-link"
-                    href="https://discord.com/users/1333868295043940363"
-                    target="_blank"
-                    rel="noopener"
-                >
-                    DISCORD ↗
-                </a>
-
-                <a
-                    class="contact-link"
-                    href="mailto:anmolragrwl314@gmail.com"
-                >
-                    EMAIL ↗
-                </a>
-
-                <a
-                    class="contact-link"
-                    href="https://www.instagram.com/anmol_agarwal_.01/"
-                    target="_blank"
-                    rel="noopener"
-                >
-                    INSTAGRAM ↗
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-
-<!-- FOOTER -->
-
-<div class="container">
-    <footer>
-        <div>© 2026 ANMOL RATAN AGARWAL</div>
-        <div>BUILT WITH CURIOSITY · NOT A TEMPLATE</div>
-    </footer>
 </div>
 
 
-<script>
+<div class="about-grid">
 
-const reveals = document.querySelectorAll(".reveal");
 
-const observer = new IntersectionObserver(
-    entries => {
-        entries.forEach(entry => {
-            if(entry.isIntersecting){
-                entry.target.classList.add("show");
-            }
-        });
-    },
-    {
-        threshold:0.12
-    }
-);
+<div class="about-text">
 
-reveals.forEach(el => observer.observe(el));
 
-</script>
+<p>
+
+I'm a computer science student at
+Lovely Professional University with a
+strong focus on
+<b style="color:#27a5ff">
+Machine Learning
+</b>
+and
+<b style="color:#27a5ff">
+Artificial Intelligence
+</b>.
+
+What excites me most is turning ideas
+into working systems.
+
+</p>
+
+
+<p>
+
+My toolkit spans
+<b style="color:#27a5ff">
+Python, Java, and C++
+</b>,
+along with full-stack development using
+<b style="color:#27a5ff">
+React, Node.js, and PostgreSQL
+</b>.
+
+I'm drawn to problems that require
+careful engineering and creative thinking.
+
+</p>
+
+
+<p>
+
+Outside of coding, I spend my time
+watching
+<b style="color:#27a5ff">
+films
+</b>,
+experimenting in the
+<b style="color:#27a5ff">
+kitchen
+</b>,
+and creating
+<b style="color:#27a5ff">
+tech-related content
+</b>.
+
+</p>
+
+
+</div>
+
+
+<!-- PROFILE IMAGE -->
+
+<div class="about-photo">
+
+<img
+src="profile.jpg"
+alt="Anmol Ratan Agarwal"
+>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     SKILLS
+===================================================== -->
+
+<section id="skills">
+
+<div class="section-card skills-card">
+
+
+<div class="section-title">
+
+<div class="icon">
+⚡
+</div>
+
+<h2>
+Skills
+</h2>
+
+</div>
+
+
+<div class="skills-cols">
+
+
+<div class="skills-col">
+
+<h3>
+Technical Skills
+</h3>
+
+
+<div class="tag-list">
+
+<span class="tag">
+Python
+</span>
+
+<span class="tag">
+Java
+</span>
+
+<span class="tag">
+C++
+</span>
+
+<span class="tag">
+React
+</span>
+
+<span class="tag">
+Node.js
+</span>
+
+<span class="tag">
+PostgreSQL
+</span>
+
+<span class="tag">
+SQL
+</span>
+
+<span class="tag">
+Git
+</span>
+
+</div>
+
+</div>
+
+
+<div class="skills-col">
+
+<h3>
+Currently Learning / Interested In
+</h3>
+
+
+<div class="tag-list">
+
+<span class="tag">
+Systems Programming
+</span>
+
+<span class="tag">
+Compilers
+</span>
+
+<span class="tag">
+Cloud (Azure)
+</span>
+
+<span class="tag">
+Machine Learning
+</span>
+
+<span class="tag">
+Artificial Intelligence
+</span>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     EXPERIENCE
+===================================================== -->
+
+<section id="experience">
+
+<div class="section-card experience-card">
+
+
+<div class="section-title">
+
+<div class="icon">
+💼
+</div>
+
+<h2>
+Experience
+</h2>
+
+</div>
+
+
+<div class="exp-item">
+
+
+<div class="exp-date">
+
+Month Year
+
+<br>
+
+—
+
+<br>
+
+Month Year
+
+</div>
+
+
+<div>
+
+<div class="exp-role">
+
+Role Title
+
+</div>
+
+
+<div class="exp-org">
+
+Company Name
+
+</div>
+
+
+<div class="exp-desc">
+
+1–2 lines about what you actually
+did and the impact you created.
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="exp-item">
+
+
+<div class="exp-date">
+
+Month Year
+
+<br>
+
+—
+
+<br>
+
+Month Year
+
+</div>
+
+
+<div>
+
+<div class="exp-role">
+
+Role Title
+
+</div>
+
+
+<div class="exp-org">
+
+Company Name
+
+</div>
+
+
+<div class="exp-desc">
+
+1–2 lines describing this role
+and the work you contributed.
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     CERTIFICATES
+===================================================== -->
+
+<section id="certificates">
+
+<div class="section-card cert-card">
+
+
+<div class="section-title">
+
+<div class="icon">
+🎓
+</div>
+
+<h2>
+Certificates
+</h2>
+
+</div>
+
+
+<div class="cert-grid">
+
+
+<div class="cert-item">
+
+<div class="cert-title">
+
+Certificate Name
+
+</div>
+
+<div class="cert-issuer">
+
+Issuer Name
+
+</div>
+
+<div class="cert-date">
+
+Issued: Month Year
+
+</div>
+
+</div>
+
+
+<div class="cert-item">
+
+<div class="cert-title">
+
+Certificate Name
+
+</div>
+
+<div class="cert-issuer">
+
+Issuer Name
+
+</div>
+
+<div class="cert-date">
+
+Issued: Month Year
+
+</div>
+
+</div>
+
+
+<div class="cert-item">
+
+<div class="cert-title">
+
+Certificate Name
+
+</div>
+
+<div class="cert-issuer">
+
+Issuer Name
+
+</div>
+
+<div class="cert-date">
+
+Issued: Month Year
+
+</div>
+
+</div>
+
+
+<div class="cert-item">
+
+<div class="cert-title">
+
+Certificate Name
+
+</div>
+
+<div class="cert-issuer">
+
+Issuer Name
+
+</div>
+
+<div class="cert-date">
+
+Issued: Month Year
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     PROJECTS
+===================================================== -->
+
+<section id="projects">
+
+<div class="section-card projects-card">
+
+
+<div class="section-title">
+
+<div class="icon">
+🚀
+</div>
+
+<h2>
+Projects
+</h2>
+
+</div>
+
+
+<div class="project-grid">
+
+
+<div class="project">
+
+
+<div class="project-head">
+
+<span class="project-title">
+
+Project Name
+
+</span>
+
+
+<div class="project-links">
+
+<a href="#">
+Live ↗
+</a>
+
+<a href="#">
+Code ↗
+</a>
+
+</div>
+
+</div>
+
+
+<p class="project-desc">
+
+1–2 sentences explaining what
+this project does and why you built it.
+
+</p>
+
+
+<div class="project-stack">
+
+<span>
+React
+</span>
+
+<span>
+Node.js
+</span>
+
+<span>
+PostgreSQL
+</span>
+
+</div>
+
+</div>
+
+
+<div class="project">
+
+
+<div class="project-head">
+
+<span class="project-title">
+
+Project Name
+
+</span>
+
+
+<div class="project-links">
+
+<a href="#">
+Code ↗
+</a>
+
+</div>
+
+</div>
+
+
+<p class="project-desc">
+
+1–2 sentences describing the
+project and the problem it solves.
+
+</p>
+
+
+<div class="project-stack">
+
+<span>
+C++
+</span>
+
+<span>
+Linux
+</span>
+
+<span>
+System Design
+</span>
+
+</div>
+
+</div>
+
+
+<div class="project">
+
+
+<div class="project-head">
+
+<span class="project-title">
+
+Project Name
+
+</span>
+
+
+<div class="project-links">
+
+<a href="#">
+Code ↗
+</a>
+
+</div>
+
+</div>
+
+
+<p class="project-desc">
+
+1–2 sentences describing your
+key contribution.
+
+</p>
+
+
+<div class="project-stack">
+
+<span>
+Python
+</span>
+
+<span>
+Flask
+</span>
+
+<span>
+Machine Learning
+</span>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section id="contact">
+
+<div class="section-card contact-card">
+
+
+<div class="section-title">
+
+<div class="icon">
+✉
+</div>
+
+<h2>
+Contact
+</h2>
+
+</div>
+
+
+<div class="contact-inner">
+
+
+<p class="contact-line">
+
+$ open mailto:anmolragrwl314@gmail.com
+
+</p>
+
+
+<div class="contact-links">
+
+
+<!-- LINKEDIN -->
+
+<a
+class="contact-box linkedin"
+href="https://www.linkedin.com/in/anmol-ratan-agarwal-590494381/"
+target="_blank"
+rel="noopener"
+>
+
+💼 LinkedIn
+
+</a>
+
+
+<!-- GITHUB -->
+
+<a
+class="contact-box github"
+href="https://github.com/anmolragrwl314-source"
+target="_blank"
+rel="noopener"
+>
+
+🐙 GitHub
+
+</a>
+
+
+<!-- DISCORD -->
+
+<a
+class="contact-box discord"
+href="https://discord.com/users/1333868295043940363"
+target="_blank"
+rel="noopener"
+>
+
+🎮 Discord
+
+</a>
+
+
+<!-- EMAIL -->
+
+<a
+class="contact-box email"
+href="mailto:anmolragrwl314@gmail.com"
+>
+
+✉️ Email
+
+</a>
+
+
+<!-- INSTAGRAM -->
+
+<a
+class="contact-box instagram"
+href="https://www.instagram.com/anmol_agarwal_.01/"
+target="_blank"
+rel="noopener"
+>
+
+📸 Instagram
+
+</a>
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+<p>
+
+© 2026 Anmol Ratan Agarwal
+— Built with ❤️ and lots of ☕
+
+</p>
+
+</footer>
+
+
+</div>
 
 </body>
+
 </html>
