@@ -1,1 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anmol Ratan Agarwal | Portfolio</title>
+<meta name="description" content="Portfolio of Anmol Ratan Agarwal — Software Engineer in training.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#10131c;
+    --bg-alt:#171b27;
+    --bg-raised:#1d2233;
+    --text:#e8e6de;
+    --text-dim:#8b93a6;
+    --accent:#f2b705;
+    --line:#262b3a;
+    --serif:'Fraunces', Georgia, serif;
+    --sans:'Inter', -apple-system, sans-serif;
+    --mono:'JetBrains Mono', 'Courier New', monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--accent);color:#10131c;}
 
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px;}
+
+  a{color:inherit;}
+
+  header.tabs{
+    position:sticky;top:0;z-index:50;
+    background:var(--bg);
+    border-bottom:1px solid var(--line);
+  }
+  .tabs-inner{
+    max-width:760px;margin:0 auto;
+    display:flex;align-items:center;
+    overflow-x:auto;
+    scrollbar-width:none;
+  }
+  .tabs-inner::-webkit-scrollbar{display:none;}
+  .tab{
+    font-family:var(--mono);
+    font-size:0.82rem;
+    color:var(--text-dim);
+    text-decoration:none;
+    padding:14px 18px;
+    border-right:1px solid var(--line);
+    white-space:nowrap;
+    transition:color .2s ease, background .2s ease;
+    flex-shrink:0;
+  }
+  .tab:hover{color:var(--text);background:var(--bg-alt);}
+  .tab.brand{
+    color:var(--accent);
+    font-weight:500;
+  }
+  .tab .dot{color:var(--accent);}
+
+  section{padding:88px 0;border-bottom:1px solid var(--line);}
+  section:last-of-type{border-bottom:none;}
+  .filepath{
+    font-family:var(--mono);
+    font-size:0.78rem;
+    color:var(--text-dim);
+    margin-bottom:18px;
+    display:block;
+  }
+  .filepath::before{content:'// ';color:var(--accent);}
+
+  h1,h2,h3{font-family:var(--serif);font-weight:500;color:var(--text);}
+
+  .hero{padding-top:64px;}
+  .hero h1{
+    font-size:clamp(2.4rem,6vw,3.6rem);
+    line-height:1.08;
+    font-weight:400;
+    max-width:11ch;
+    margin-bottom:20px;
+  }
+  .hero h1 em{font-style:italic;color:var(--accent);}
+  .hero p.role{
+    font-family:var(--mono);
+    color:var(--text-dim);
+    font-size:0.95rem;
+    margin-bottom:28px;
+  }
+  .hero p.pitch{
+    max-width:52ch;
+    color:var(--text);
+    font-size:1.05rem;
+    margin-bottom:32px;
+  }
+  .hero-links{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{
+    font-family:var(--mono);
+    font-size:0.85rem;
+    padding:11px 20px;
+    border:1px solid var(--line);
+    text-decoration:none;
+    color:var(--text);
+    transition:border-color .2s ease, color .2s ease;
+  }
+  .btn:hover{border-color:var(--accent);color:var(--accent);}
+  .btn.primary{background:var(--accent);color:#10131c;border-color:var(--accent);}
+  .btn.primary:hover{opacity:0.88;color:#10131c;}
+
+  .about-grid{display:grid;grid-template-columns:1fr 220px;gap:40px;align-items:start;}
+  .about-text p{margin-bottom:16px;max-width:60ch;color:var(--text);}
+  .about-photo{
+    width:100%;aspect-ratio:1/1;
+    background:var(--bg-alt);
+    border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--mono);font-size:0.75rem;color:var(--text-dim);
+    text-align:center;padding:16px;
+  }
+  .about-photo img{width:100%;height:100%;object-fit:cover;display:none;}
+
+  .skills-cols{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+  .skills-col h3{font-size:1rem;font-family:var(--mono);font-weight:400;color:var(--text-dim);margin-bottom:16px;}
+  .tag-list{display:flex;flex-wrap:wrap;gap:8px;}
+  .tag{
+    font-family:var(--mono);font-size:0.82rem;
+    padding:6px 12px;
+    border:1px solid var(--line);
+    color:var(--text);
+  }
+
+  .exp-item{
+    display:grid;grid-template-columns:120px 1fr;gap:24px;
+    padding:24px 0;border-top:1px solid var(--line);
+  }
+  .exp-item:first-of-type{border-top:none;}
+  .exp-date{font-family:var(--mono);font-size:0.8rem;color:var(--text-dim);}
+  .exp-role{font-family:var(--serif);font-size:1.15rem;margin-bottom:4px;}
+  .exp-org{font-family:var(--mono);font-size:0.82rem;color:var(--accent);margin-bottom:10px;}
+  .exp-desc{color:var(--text-dim);font-size:0.95rem;max-width:56ch;}
+
+  .project{
+    padding:28px 0;border-top:1px solid var(--line);
+    display:grid;grid-template-columns:1fr;gap:10px;
+  }
+  .project:first-of-type{border-top:none;}
+  .project-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;}
+  .project-title{font-family:var(--serif);font-size:1.3rem;}
+  .project-links{display:flex;gap:14px;font-family:var(--mono);font-size:0.8rem;}
+  .project-links a{color:var(--text-dim);text-decoration:none;border-bottom:1px solid transparent;}
+  .project-links a:hover{color:var(--accent);border-color:var(--accent);}
+  .project-desc{color:var(--text-dim);max-width:64ch;font-size:0.96rem;}
+  .project-stack{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px;}
+  .project-stack span{font-family:var(--mono);font-size:0.72rem;color:var(--text-dim);}
+  .project-stack span::after{content:' ·';}
+  .project-stack span:last-child::after{content:'';}
+
+  .contact-inner{display:flex;flex-direction:column;gap:20px;align-items:flex-start;}
+  .contact-line{font-family:var(--mono);font-size:0.9rem;color:var(--text-dim);}
+  .contact-links{display:flex;gap:16px;flex-wrap:wrap;}
+
+  footer{padding:32px 0;text-align:left;}
+  footer p{font-family:var(--mono);font-size:0.78rem;color:var(--text-dim);}
+
+  @media (max-width:640px){
+    .about-grid{grid-template-columns:1fr;}
+    .about-photo{max-width:180px;}
+    .skills-cols{grid-template-columns:1fr;}
+    .exp-item{grid-template-columns:1fr;gap:8px;}
+    section{padding:64px 0;}
+  }
+</style>
+</head>
+<body>
+
+<header class="tabs">
+  <div class="tabs-inner">
+    <a class="tab brand" href="#home"><span class="dot">●</span> anmol</a>
+    <a class="tab" href="#about">about.md</a>
+    <a class="tab" href="#skills">skills.json</a>
+    <a class="tab" href="#experience">experience.log</a>
+    <a class="tab" href="#projects">projects/</a>
+    <a class="tab" href="#contact">contact.sh</a>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="hero" id="home">
+    <p class="role">Software Engineer, in training</p>
+    <h1>Anmol Ratan <em>Agarwal</em></h1>
+    <p class="pitch">
+      [Placeholder] I build tools people actually use — from real-time collaboration
+      platforms to a custom shell written in C++. Currently studying Computer Science
+      and chasing a role where I can ship software that matters.
+    </p>
+    <div class="hero-links">
+      <a href="#projects" class="btn primary">View projects</a>
+      <a href="#contact" class="btn">Get in touch</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <span class="filepath">about.md</span>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>[Placeholder] Write 2–3 short paragraphs here about your background, what
+        you study, and what kind of problems you like solving. Keep it in your own
+        words — this is the section people read to decide if they want to talk to you.</p>
+        <p>[Placeholder] Second paragraph: your technical interests, tools you enjoy,
+        or a specific niche you're drawn to (e.g. systems programming, ML, backend).</p>
+        <p>[Placeholder] Third paragraph: something outside of code — hobbies, what
+        you're working toward, or a goal you're chasing.</p>
+      </div>
+      <div class="about-photo">Replace this block with &lt;img src="your-photo.jpg"&gt;</div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <span class="filepath">skills.json</span>
+    <h2 style="margin-bottom:32px;">Skills</h2>
+    <div class="skills-cols">
+      <div class="skills-col">
+        <h3>technical</h3>
+        <div class="tag-list">
+          <span class="tag">Python</span>
+          <span class="tag">Java</span>
+          <span class="tag">C++</span>
+          <span class="tag">React</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">SQL</span>
+          <span class="tag">Git</span>
+        </div>
+      </div>
+      <div class="skills-col">
+        <h3>currently learning / interested in</h3>
+        <div class="tag-list">
+          <span class="tag">Systems Programming</span>
+          <span class="tag">Compilers</span>
+          <span class="tag">Cloud (Azure)</span>
+          <span class="tag">Machine Learning</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <span class="filepath">experience.log</span>
+    <h2 style="margin-bottom:8px;">Experience</h2>
+    <div class="exp-item">
+      <div class="exp-date">[Month Year] — [Month Year]</div>
+      <div>
+        <div class="exp-role">[Placeholder Role]</div>
+        <div class="exp-org">[Placeholder Company]</div>
+        <div class="exp-desc">[Placeholder] One or two lines on what you actually did — use a real outcome or number if you have one.</div>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-date">[Month Year] — [Month Year]</div>
+      <div>
+        <div class="exp-role">[Placeholder Role]</div>
+        <div class="exp-org">[Placeholder Company]</div>
+        <div class="exp-desc">[Placeholder] One or two lines describing this role.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <span class="filepath">projects/</span>
+    <h2 style="margin-bottom:8px;">Selected projects</h2>
+
+    <div class="project">
+      <div class="project-head">
+        <span class="project-title">[Placeholder Project Name]</span>
+        <div class="project-links">
+          <a href="#">Live</a>
+          <a href="#">Code</a>
+        </div>
+      </div>
+      <p class="project-desc">[Placeholder] One or two sentences on what this project does and why you built it.</p>
+      <div class="project-stack"><span>React</span><span>Node.js</span></div>
+    </div>
+
+    <div class="project">
+      <div class="project-head">
+        <span class="project-title">[Placeholder Project Name]</span>
+        <div class="project-links">
+          <a href="#">Live</a>
+          <a href="#">Code</a>
+        </div>
+      </div>
+      <p class="project-desc">[Placeholder] One or two sentences describing this one.</p>
+      <div class="project-stack"><span>C++</span><span>Linux</span></div>
+    </div>
+
+    <div class="project">
+      <div class="project-head">
+        <span class="project-title">[Placeholder Project Name]</span>
+        <div class="project-links">
+          <a href="#">Code</a>
+        </div>
+      </div>
+      <p class="project-desc">[Placeholder] One or two sentences describing this one.</p>
+      <div class="project-stack"><span>Python</span><span>Flask</span></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <span class="filepath">contact.sh</span>
+    <div class="contact-inner">
+      <h2>Let's talk</h2>
+      <p class="contact-line">$ open mailto:your-email@example.com</p>
+      <div class="contact-links">
+        <a class="btn" href="#" target="_blank">LinkedIn</a>
+        <a class="btn" href="#" target="_blank">GitHub</a>
+        <a class="btn" href="mailto:your-email@example.com">Email</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Anmol Ratan Agarwal. Built from scratch.</p>
+  </footer>
+
+</div>
+</body>
+</html>
