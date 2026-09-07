@@ -6,12 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Anmol Ratan Agarwal | Portfolio</title>
-
     <meta name="description" content="Portfolio of Anmol Ratan Agarwal — Software Engineer in training.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
     <style>
@@ -23,7 +21,6 @@
             --text-dim: #8b93a6;
             --accent: #f2b705;
             --line: #262b3a;
-
             --serif: 'Fraunces', Georgia, serif;
             --sans: 'Inter', -apple-system, sans-serif;
             --mono: 'JetBrains Mono', 'Courier New', monospace;
@@ -35,9 +32,9 @@
             box-sizing: border-box;
         }
 
-        html {
+        html, body {
             scroll-behavior: smooth;
-            overflow-x: hidden;
+            overflow-x: hidden; /* Prevents horizontal scrolling */
         }
 
         body {
@@ -46,7 +43,6 @@
             font-family: var(--sans);
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
         }
 
         ::selection {
@@ -54,9 +50,9 @@
             color: #10131c;
         }
 
-        /* Container specifically sized to prevent awkward empty spaces */
+        /* --- RESPONSIVE CONTAINER --- */
         .wrap {
-            max-width: 1000px;
+            max-width: 1100px; /* Widened for laptops/desktops */
             width: 100%;
             margin: 0 auto;
             padding: 0 24px;
@@ -75,7 +71,7 @@
         }
 
         .tabs-inner {
-            max-width: 1000px;
+            max-width: 1100px;
             width: 100%;
             margin: 0 auto;
             display: flex;
@@ -83,21 +79,20 @@
             justify-content: center;
             overflow-x: auto;
             scrollbar-width: none;
-            padding: 10px 8px;
+            padding: 12px 8px;
         }
 
         .tabs-inner::-webkit-scrollbar {
             display: none;
         }
 
-        /* Base tab styles (Mobile) */
         .tab {
             font-family: var(--mono);
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             color: white;
             text-decoration: none;
-            padding: 10px 16px;
-            margin: 0 4px;
+            padding: 10px 18px;
+            margin: 0 6px;
             border-radius: 10px;
             border: none;
             white-space: nowrap;
@@ -106,13 +101,10 @@
             box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
         }
 
-        /* Scaled up tabs for Desktop to fix proportion issue */
         @media (min-width: 768px) {
             .tab {
-                font-size: 1.05rem;
-                padding: 14px 24px;
-                margin: 0 8px;
-                border-radius: 12px;
+                font-size: 1rem;
+                padding: 12px 22px;
             }
         }
 
@@ -125,13 +117,13 @@
         .tab:nth-child(7) { background: #5865F2; }
 
         .tab:hover {
-            transform: translateY(-4px);
+            transform: translateY(-3px);
             filter: brightness(1.15);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+            box-shadow: 0 7px 18px rgba(0, 0, 0, 0.35);
         }
 
         section {
-            padding: 96px 0;
+            padding: 100px 0;
             border-bottom: 1px solid var(--line);
         }
 
@@ -159,6 +151,8 @@
             margin-bottom: 24px;
         }
 
+        .hero h1 em { font-style: italic; color: var(--accent); }
+
         .hero p.role {
             font-family: var(--mono);
             color: var(--text-dim);
@@ -170,7 +164,7 @@
             color: var(--text);
             font-size: 1.25rem;
             margin-bottom: 40px;
-            max-width: 100%; /* Allows text to fill the container naturally */
+            max-width: 100%;
         }
 
         .hero-links { display: flex; gap: 16px; flex-wrap: wrap; }
@@ -178,8 +172,8 @@
         .btn {
             font-family: var(--mono);
             font-size: 1rem;
-            padding: 14px 28px;
-            border: 2px solid var(--line);
+            padding: 12px 24px;
+            border: 1px solid var(--line);
             border-radius: 8px;
             text-decoration: none;
             color: var(--text);
@@ -194,16 +188,16 @@
             border-color: var(--accent);
         }
 
-        .btn.primary:hover { opacity: 0.9; color: #10131c; transform: translateY(-2px); }
+        .btn.primary:hover { opacity: 0.88; color: #10131c; }
 
+        /* --- ABOUT GRID --- */
         .about-grid {
             display: grid;
-            grid-template-columns: 1fr 280px;
+            grid-template-columns: 1fr 300px;
             gap: 60px;
             align-items: center;
         }
 
-        /* Removed max-width to fix the empty space issue */
         .about-text p { 
             margin-bottom: 20px; 
             color: var(--text); 
@@ -237,6 +231,7 @@
             border-radius: 50%;
         }
 
+        /* --- EDUCATION SECTION --- */
         .edu-grid { 
             display: flex; 
             flex-direction: column; 
@@ -250,9 +245,7 @@
             transition: 0.3s;
         }
 
-        .edu-item:hover { 
-            border-color: var(--accent); 
-        }
+        .edu-item:hover { border-color: var(--accent); }
 
         .edu-item::before {
             content: '';
@@ -273,7 +266,7 @@
 
         .edu-title { 
             font-family: var(--serif); 
-            font-size: 1.4rem; 
+            font-size: 1.3rem; 
             margin-bottom: 6px; 
             color: var(--text); 
         }
@@ -289,13 +282,13 @@
             color: var(--text-dim); 
             font-size: 1.05rem; 
             line-height: 1.6; 
-            width: 100%; /* Fills the container instead of cutting off */
         }
 
+        /* --- SKILLS GRID --- */
         .skills-cols { 
             display: grid; 
-            grid-template-columns: 1fr 1fr; 
-            gap: 60px; 
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+            gap: 50px; 
         }
 
         .skills-col h3 {
@@ -303,35 +296,36 @@
             font-family: var(--mono);
             font-weight: 500;
             color: var(--text-dim);
-            margin-bottom: 24px;
+            margin-bottom: 20px;
         }
 
-        .tag-list { display: flex; flex-wrap: wrap; gap: 12px; }
+        .tag-list { display: flex; flex-wrap: wrap; gap: 10px; }
 
         .tag {
             font-family: var(--mono);
             font-size: 0.95rem;
-            padding: 10px 18px;
+            padding: 8px 16px;
             border: 1px solid var(--line);
             color: var(--text);
             border-radius: 6px;
             background: var(--bg-alt);
         }
 
+        /* --- CERTIFICATES GRID --- */
         .cert-grid { 
             display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
             gap: 24px; 
         }
 
         .cert-item {
             border: 1px solid var(--line);
             background: var(--bg-alt);
-            padding: 28px;
+            padding: 24px;
             display: block;
             text-decoration: none;
             transition: 0.3s;
-            border-radius: 12px;
+            border-radius: 10px;
         }
 
         .cert-item:hover { 
@@ -340,21 +334,54 @@
             box-shadow: 0 10px 25px rgba(0,0,0,0.2);
         }
 
-        .cert-title { font-family: var(--serif); font-size: 1.25rem; margin-bottom: 10px; }
-        .cert-issuer { font-family: var(--mono); font-size: 0.9rem; color: var(--accent); margin-bottom: 8px; }
+        .cert-title { font-family: var(--serif); font-size: 1.2rem; margin-bottom: 8px; }
+        .cert-issuer { font-family: var(--mono); font-size: 0.9rem; color: var(--accent); margin-bottom: 6px; }
         .cert-date { font-family: var(--mono); font-size: 0.85rem; color: var(--text-dim); }
 
+        /* --- PROJECTS GRID --- */
+        .project {
+            padding: 32px 0;
+            border-top: 1px solid var(--line);
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        .project:first-of-type { border-top: none; }
+
+        .project-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .project-title { font-family: var(--serif); font-size: 1.4rem; }
+
+        .project-links { display: flex; gap: 14px; font-family: var(--mono); font-size: 0.85rem; }
+        .project-links a { color: var(--text-dim); text-decoration: none; border-bottom: 1px solid transparent; }
+        .project-links a:hover { color: var(--accent); border-color: var(--accent); }
+
+        .project-desc { color: var(--text-dim); font-size: 1.05rem; line-height: 1.6; }
+
+        .project-stack { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 4px; }
+        .project-stack span { font-family: var(--mono); font-size: 0.8rem; color: var(--text-dim); }
+        .project-stack span::after { content: ' ·'; }
+        .project-stack span:last-child::after { content: ''; }
+
+        /* --- CONTACT SECTION --- */
         .contact-inner { display: flex; flex-direction: column; gap: 24px; align-items: flex-start; }
-        .contact-line { font-family: var(--mono); font-size: 1.1rem; color: var(--text-dim); }
-        .contact-links { display: flex; justify-content: flex-start; gap: 20px; flex-wrap: wrap; margin-top: 10px; }
+        .contact-line { font-family: var(--mono); font-size: 1.05rem; color: var(--text-dim); }
+        .contact-links { display: flex; justify-content: flex-start; gap: 16px; flex-wrap: wrap; margin-top: 10px; }
 
         .contact-box {
-            padding: 16px 32px;
+            padding: 14px 28px;
             border-radius: 12px;
             color: white;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             transition: 0.3s;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             font-family: var(--mono);
@@ -368,13 +395,13 @@
         .contact-box:hover {
             transform: translateY(-5px);
             filter: brightness(1.15);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
 
         footer { padding: 40px 0; text-align: left; border-top: 1px solid var(--line); margin-top: 40px; }
         footer p { font-family: var(--mono); font-size: 0.9rem; color: var(--text-dim); }
 
-        /* Mobile Responsiveness */
+        /* --- RESPONSIVE ADJUSTMENTS FOR MOBILE/TABLET --- */
         @media (max-width: 800px) {
             .tabs-inner { justify-content: flex-start; }
             .about-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -396,6 +423,7 @@
             <a class="tab" href="#education">Education</a>
             <a class="tab" href="#skills">Skills</a>
             <a class="tab" href="#certificates">Certificates</a>
+            <a class="tab" href="#projects">Projects</a>
             <a class="tab" href="#contact">Contact</a>
         </div>
     </header>
@@ -411,7 +439,7 @@
                 machine learning, and building useful technology.
             </p>
             <div class="hero-links">
-                <a href="#about" class="btn primary">About Me</a>
+                <a href="#projects" class="btn primary">View projects</a>
                 <a href="#contact" class="btn">Get in touch</a>
             </div>
         </section>
@@ -421,8 +449,8 @@
             <div class="about-grid">
                 <div class="about-text">
                     <p>I'm a computer science student at Lovely Professional University with a strong focus on Machine Learning and Artificial Intelligence. What excites me most is turning ideas into working systems.</p>
-                    <p>My toolkit spans Python, Java, and Full-Stack development using React, Node.js, and PostgreSQL. I'm drawn to problems that require both careful engineering and creative thinking.</p>
-                    <p>Outside of coding, I spend my time watching films, playing poker, reading non-fiction, and continuously exploring new concepts in the tech space.</p>
+                    <p>My toolkit spans Python, Java, and C++, along with full-stack development using React, Node.js, and PostgreSQL. I'm drawn to problems that require both careful engineering and creative thinking.</p>
+                    <p>Outside of coding, I spend my time watching films, experimenting in the kitchen, and creating tech-related content.</p>
                 </div>
                 <div class="about-photo">
                     <img src="profile.jpg" alt="Anmol Ratan Agarwal">
@@ -435,7 +463,7 @@
             <div class="edu-grid">
                 <div class="edu-item">
                     <div class="edu-title">Bachelor of Technology in Computer Science & Engineering</div>
-                    <div class="edu-meta">Lovely Professional University (LPU) • CGPA: 8.3</div>
+                    <div class="edu-meta">Lovely Professional University (LPU) • Present</div>
                     <div class="edu-desc">Currently pursuing a comprehensive degree focused on software engineering, algorithms, and advanced tech stacks. Building a robust practical foundation through hands-on development and project-based learning.</div>
                 </div>
                 
@@ -461,21 +489,21 @@
                     <div class="tag-list">
                         <span class="tag">Python</span>
                         <span class="tag">Java</span>
+                        <span class="tag">C++</span>
                         <span class="tag">React</span>
                         <span class="tag">Node.js</span>
                         <span class="tag">PostgreSQL</span>
-                        <span class="tag">SQL / DBMS</span>
-                        <span class="tag">Git & GitHub</span>
-                        <span class="tag">Docker</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">Git</span>
                     </div>
                 </div>
                 <div class="skills-col">
                     <h3>Currently Learning / Interested In</h3>
                     <div class="tag-list">
-                        <span class="tag">Artificial Intelligence</span>
+                        <span class="tag">Systems Programming</span>
+                        <span class="tag">Compilers</span>
+                        <span class="tag">Cloud (Azure)</span>
                         <span class="tag">Machine Learning</span>
-                        <span class="tag">Cloud Computing (Azure)</span>
-                        <span class="tag">Cyber Security</span>
                     </div>
                 </div>
             </div>
@@ -485,30 +513,52 @@
             <h2>Certificates</h2>
             <div class="cert-grid">
                 <a class="cert-item" href="#" target="_blank" rel="noopener">
-                    <div class="cert-title">CodeChef November Long Challenge</div>
-                    <div class="cert-issuer">CodeChef</div>
-                    <div class="cert-date">Top 5% Achievement</div>
+                    <div class="cert-title">Computer Programming</div>
+                    <div class="cert-issuer">NIIT iamneo (Neo Colab)</div>
+                    <div class="cert-date">Issued: 21 May 2026</div>
+                </a>
+                <a class="cert-item" href="#" target="_blank" rel="noopener">
+                    <div class="cert-title">Leadership Skills / Soft Skills</div>
+                    <div class="cert-issuer">MindLuster</div>
+                    <div class="cert-date">Issued: 30 Oct 2025</div>
                 </a>
                 <a class="cert-item" href="#" target="_blank" rel="noopener">
                     <div class="cert-title">Introduction to Artificial Intelligence</div>
                     <div class="cert-issuer">Infosys Springboard</div>
-                    <div class="cert-date">Certified</div>
+                    <div class="cert-date">Issued: 24 Mar 2026</div>
                 </a>
-                <a class="cert-item" href="#" target="_blank" rel="noopener">
-                    <div class="cert-title">Advanced Courses Certifications</div>
-                    <div class="cert-issuer">Various Platforms</div>
-                    <div class="cert-date">Continuous Learner</div>
-                </a>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <div class="project-head">
+                    <div class="project-title">Correct Body Posture Device (IoT)</div>
+                    <div class="project-links">
+                        <a href="#" target="_blank" rel="noopener">View Source</a>
+                    </div>
+                </div>
+                <div class="project-desc">
+                    An IoT device designed to detect slumping using sensors and provide alerts with a buzzer. Built to solve real-world posture problems effectively.
+                </div>
+                <div class="project-stack">
+                    <span>Arduino Uno</span>
+                    <span>Flex Sensors</span>
+                    <span>Buzzer</span>
+                    <span>Mobile App Integration</span>
+                </div>
             </div>
         </section>
 
         <section id="contact">
             <div class="contact-inner">
                 <h2>Contact</h2>
-                <p class="contact-line">$ connect --email anmolragrwl314@gmail.com --phone +91-8791788314</p>
+                <p class="contact-line">$ open mailto:anmolragrwl314@gmail.com</p>
                 <div class="contact-links">
                     <a class="contact-box linkedin" href="https://www.linkedin.com/in/anmol-ratan-agarwal-590494381/" target="_blank" rel="noopener">LinkedIn</a>
                     <a class="contact-box github" href="https://github.com/anmolragrwl314-source" target="_blank" rel="noopener">GitHub</a>
+                    <a class="contact-box discord" href="https://discord.com/users/1333868295043940363" target="_blank" rel="noopener">Discord</a>
                     <a class="contact-box email" href="mailto:anmolragrwl314@gmail.com">Email</a>
                 </div>
             </div>
