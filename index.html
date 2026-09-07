@@ -7,18 +7,14 @@
 
     <title>Anmol Ratan Agarwal | Portfolio</title>
 
-    <meta name="description"
-        content="Portfolio of Anmol Ratan Agarwal — Software Engineer in training.">
+    <meta name="description" content="Portfolio of Anmol Ratan Agarwal — Software Engineer in training.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
     <style>
-
         :root {
             --bg: #10131c;
             --bg-alt: #171b27;
@@ -235,6 +231,61 @@
             color: var(--text);
         }
 
+        /* NEW EDUCATION STYLES */
+        .edu-grid { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 28px; 
+        }
+
+        .edu-item {
+            border-left: 2px solid var(--line);
+            padding-left: 24px;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .edu-item:hover { 
+            border-color: var(--accent); 
+        }
+
+        .edu-item::before {
+            content: '';
+            position: absolute;
+            left: -5px;
+            top: 6px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--line);
+            transition: 0.3s;
+        }
+
+        .edu-item:hover::before { 
+            background: var(--accent); 
+            box-shadow: 0 0 10px rgba(242, 183, 5, 0.5); 
+        }
+
+        .edu-title { 
+            font-family: var(--serif); 
+            font-size: 1.2rem; 
+            margin-bottom: 4px; 
+            color: var(--text); 
+        }
+
+        .edu-meta { 
+            font-family: var(--mono); 
+            font-size: 0.85rem; 
+            color: var(--accent); 
+            margin-bottom: 8px; 
+        }
+
+        .edu-desc { 
+            color: var(--text-dim); 
+            font-size: 0.95rem; 
+            line-height: 1.5; 
+        }
+
         .project {
             padding: 28px 0;
             border-top: 1px solid var(--line);
@@ -331,6 +382,7 @@
         <div class="tabs-inner">
             <a class="tab" href="#home">Home</a>
             <a class="tab" href="#about">About</a>
+            <a class="tab" href="#education">Education</a>
             <a class="tab" href="#skills">Skills</a>
             <a class="tab" href="#certificates">Certificates</a>
             <a class="tab" href="#projects">Projects</a>
@@ -364,6 +416,29 @@
                 </div>
                 <div class="about-photo">
                     <img src="profile.jpg" alt="Anmol Ratan Agarwal">
+                </div>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2 style="margin-bottom:32px;">Education</h2>
+            <div class="edu-grid">
+                <div class="edu-item">
+                    <div class="edu-title">Bachelor of Technology in Computer Science & Engineering</div>
+                    <div class="edu-meta">Lovely Professional University (LPU) • Present</div>
+                    <div class="edu-desc">Currently pursuing a comprehensive degree focused on software engineering, algorithms, and advanced tech stacks. Building a robust practical foundation through hands-on development and project-based learning.</div>
+                </div>
+                
+                <div class="edu-item">
+                    <div class="edu-title">Higher Secondary Education (Class 12 - PCM)</div>
+                    <div class="edu-meta">St. Francis Convent School • Score: 77%</div>
+                    <div class="edu-desc">Opted for the Physics, Chemistry, and Mathematics (PCM) stream. Developed strong analytical skills and logical reasoning capabilities essential for transitioning into computer science.</div>
+                </div>
+                
+                <div class="edu-item">
+                    <div class="edu-title">Secondary Education (Class 10)</div>
+                    <div class="edu-meta">St. Francis Convent School • Score: 80%</div>
+                    <div class="edu-desc">Completed foundational academic coursework with an emphasis on sciences and mathematics, consistently maintaining high academic standards.</div>
                 </div>
             </div>
         </section>
@@ -416,7 +491,6 @@
                 </a>
             </div>
         </section>
- 
 
         <section id="contact">
             <div class="contact-inner">
