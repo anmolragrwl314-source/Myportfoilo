@@ -52,8 +52,9 @@
             color: #10131c;
         }
 
+        /* UPDATED: Increased max-width for desktop screens */
         .wrap {
-            max-width: 760px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 24px;
         }
@@ -70,8 +71,9 @@
             border-bottom: 1px solid var(--line);
         }
 
+        /* UPDATED: Increased max-width to match the content */
         .tabs-inner {
-            max-width: 900px;
+            max-width: 1200px;
             margin: 0 auto;
             display: flex;
             align-items: center;
@@ -135,7 +137,7 @@
             font-size: clamp(2.4rem, 6vw, 3.6rem);
             line-height: 1.08;
             font-weight: 400;
-            max-width: 11ch;
+            max-width: 15ch;
             margin-bottom: 20px;
         }
 
@@ -149,9 +151,9 @@
         }
 
         .hero p.pitch {
-            max-width: 52ch;
+            max-width: 70ch;
             color: var(--text);
-            font-size: 1.05rem;
+            font-size: 1.15rem;
             margin-bottom: 32px;
         }
 
@@ -177,14 +179,16 @@
 
         .btn.primary:hover { opacity: 0.88; color: #10131c; }
 
+        /* UPDATED: Increased the width of the image column on desktop */
         .about-grid {
             display: grid;
-            grid-template-columns: 1fr 220px;
-            gap: 40px;
-            align-items: start;
+            grid-template-columns: 1fr 300px;
+            gap: 60px;
+            align-items: center;
         }
 
-        .about-text p { margin-bottom: 16px; max-width: 60ch; color: var(--text); }
+        /* UPDATED: Let the text span wider on desktop */
+        .about-text p { margin-bottom: 16px; max-width: 75ch; color: var(--text); font-size: 1.05rem;}
 
         .about-photo {
             width: 100%;
@@ -211,27 +215,6 @@
             border-radius: 50%;
         }
 
-        .skills-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-
-        .skills-col h3 {
-            font-size: 1rem;
-            font-family: var(--mono);
-            font-weight: 400;
-            color: var(--text-dim);
-            margin-bottom: 16px;
-        }
-
-        .tag-list { display: flex; flex-wrap: wrap; gap: 8px; }
-
-        .tag {
-            font-family: var(--mono);
-            font-size: 0.82rem;
-            padding: 6px 12px;
-            border: 1px solid var(--line);
-            color: var(--text);
-        }
-
-        /* NEW EDUCATION STYLES */
         .edu-grid { 
             display: flex; 
             flex-direction: column; 
@@ -284,14 +267,61 @@
             color: var(--text-dim); 
             font-size: 0.95rem; 
             line-height: 1.5; 
+            max-width: 80ch;
         }
 
+        /* UPDATED: Adapts based on screen size automatically */
+        .skills-cols { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+            gap: 40px; 
+        }
+
+        .skills-col h3 {
+            font-size: 1rem;
+            font-family: var(--mono);
+            font-weight: 400;
+            color: var(--text-dim);
+            margin-bottom: 16px;
+        }
+
+        .tag-list { display: flex; flex-wrap: wrap; gap: 8px; }
+
+        .tag {
+            font-family: var(--mono);
+            font-size: 0.85rem;
+            padding: 8px 14px;
+            border: 1px solid var(--line);
+            color: var(--text);
+        }
+
+        /* UPDATED: Adapts to 3 columns on desktop automatically */
+        .cert-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            gap: 20px; 
+        }
+
+        .cert-item {
+            border: 1px solid var(--line);
+            padding: 24px;
+            display: block;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .cert-item:hover { border-color: var(--accent); transform: translateY(-3px); }
+
+        .cert-title { font-family: var(--serif); font-size: 1.1rem; margin-bottom: 6px; }
+        .cert-issuer { font-family: var(--mono); font-size: 0.8rem; color: var(--accent); margin-bottom: 4px; }
+        .cert-date { font-family: var(--mono); font-size: 0.75rem; color: var(--text-dim); }
+
         .project {
-            padding: 28px 0;
+            padding: 32px 0;
             border-top: 1px solid var(--line);
             display: grid;
             grid-template-columns: 1fr;
-            gap: 10px;
+            gap: 12px;
         }
 
         .project:first-of-type { border-top: none; }
@@ -304,38 +334,22 @@
             flex-wrap: wrap;
         }
 
-        .project-title { font-family: var(--serif); font-size: 1.3rem; }
+        .project-title { font-family: var(--serif); font-size: 1.4rem; }
 
-        .project-links { display: flex; gap: 14px; font-family: var(--mono); font-size: 0.8rem; }
+        .project-links { display: flex; gap: 14px; font-family: var(--mono); font-size: 0.85rem; }
 
         .project-links a { color: var(--text-dim); text-decoration: none; border-bottom: 1px solid transparent; }
         .project-links a:hover { color: var(--accent); border-color: var(--accent); }
 
-        .project-desc { color: var(--text-dim); max-width: 64ch; font-size: 0.96rem; }
+        .project-desc { color: var(--text-dim); max-width: 80ch; font-size: 1rem; }
 
         .project-stack { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 4px; }
-        .project-stack span { font-family: var(--mono); font-size: 0.72rem; color: var(--text-dim); }
+        .project-stack span { font-family: var(--mono); font-size: 0.75rem; color: var(--text-dim); }
         .project-stack span::after { content: ' ·'; }
         .project-stack span:last-child::after { content: ''; }
 
-        .cert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-
-        .cert-item {
-            border: 1px solid var(--line);
-            padding: 18px;
-            display: block;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
-        .cert-item:hover { border-color: var(--accent); transform: translateY(-3px); }
-
-        .cert-title { font-family: var(--serif); font-size: 1.05rem; margin-bottom: 6px; }
-        .cert-issuer { font-family: var(--mono); font-size: 0.78rem; color: var(--accent); margin-bottom: 4px; }
-        .cert-date { font-family: var(--mono); font-size: 0.75rem; color: var(--text-dim); }
-
         .contact-inner { display: flex; flex-direction: column; gap: 20px; align-items: flex-start; }
-        .contact-line { font-family: var(--mono); font-size: 0.9rem; color: var(--text-dim); }
+        .contact-line { font-family: var(--mono); font-size: 0.95rem; color: var(--text-dim); }
         .contact-links { display: flex; justify-content: flex-start; gap: 15px; flex-wrap: wrap; margin-top: 10px; }
 
         .contact-box {
@@ -363,12 +377,10 @@
         footer { padding: 32px 0; text-align: left; }
         footer p { font-family: var(--mono); font-size: 0.78rem; color: var(--text-dim); }
 
-        @media (max-width: 640px) {
+        @media (max-width: 768px) {
             .tabs-inner { justify-content: flex-start; }
             .about-grid { grid-template-columns: 1fr; }
-            .about-photo { max-width: 180px; }
-            .skills-cols { grid-template-columns: 1fr; }
-            .cert-grid { grid-template-columns: 1fr; }
+            .about-photo { max-width: 220px; margin-top: 20px; }
             section { padding: 64px 0; }
             .contact-links { justify-content: flex-start; }
         }
