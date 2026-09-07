@@ -235,21 +235,6 @@
             color: var(--text);
         }
 
-        .exp-item {
-            display: grid;
-            grid-template-columns: 120px 1fr;
-            gap: 24px;
-            padding: 24px 0;
-            border-top: 1px solid var(--line);
-        }
-
-        .exp-item:first-of-type { border-top: none; }
-
-        .exp-date { font-family: var(--mono); font-size: 0.8rem; color: var(--text-dim); }
-        .exp-role { font-family: var(--serif); font-size: 1.15rem; margin-bottom: 4px; }
-        .exp-org { font-family: var(--mono); font-size: 0.82rem; color: var(--accent); margin-bottom: 10px; }
-        .exp-desc { color: var(--text-dim); font-size: 0.95rem; max-width: 56ch; }
-
         .project {
             padding: 28px 0;
             border-top: 1px solid var(--line);
@@ -332,7 +317,6 @@
             .about-grid { grid-template-columns: 1fr; }
             .about-photo { max-width: 180px; }
             .skills-cols { grid-template-columns: 1fr; }
-            .exp-item { grid-template-columns: 1fr; gap: 8px; }
             .cert-grid { grid-template-columns: 1fr; }
             section { padding: 64px 0; }
             .contact-links { justify-content: flex-start; }
@@ -348,7 +332,6 @@
             <a class="tab" href="#home">Home</a>
             <a class="tab" href="#about">About</a>
             <a class="tab" href="#skills">Skills</a>
-            <a class="tab" href="#experience">Experience</a>
             <a class="tab" href="#certificates">Certificates</a>
             <a class="tab" href="#projects">Projects</a>
             <a class="tab" href="#contact">Contact</a>
@@ -409,26 +392,6 @@
                         <span class="tag">Cloud (Azure)</span>
                         <span class="tag">Machine Learning</span>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="experience">
-            <h2 style="margin-bottom:8px;">Experience</h2>
-            <div class="exp-item">
-                <div class="exp-date">EDIT ME: Month Year — Month Year</div>
-                <div>
-                    <div class="exp-role">EDIT ME: Role Title</div>
-                    <div class="exp-org">EDIT ME: Company Name</div>
-                    <div class="exp-desc">EDIT ME: 1-2 lines on what you actually did.</div>
-                </div>
-            </div>
-            <div class="exp-item">
-                <div class="exp-date">EDIT ME: Month Year — Month Year</div>
-                <div>
-                    <div class="exp-role">EDIT ME: Role Title</div>
-                    <div class="exp-org">EDIT ME: Company Name</div>
-                    <div class="exp-desc">EDIT ME: 1-2 lines describing this role.</div>
                 </div>
             </div>
         </section>
